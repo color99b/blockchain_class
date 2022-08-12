@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 언어설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- http-equiv은 호환성, content는 패치내역(자바스크립트를 읽을 수 있는 어디까지인가) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- //현재 맞추고 있는 페이지의 크기 및 기준을 설정한다, scale은 확대여부 -> 사파리는 확대 축소를 막아놓아도 뚫어버림 -->
+    <!-- 여는태그와 닫는 태그 합친거 하나를 엘리먼트라고 부른다 헤드 엘레먼트는 브라우저 셋팅에 대한 기본-->
+    <title>Document</title>
+    <style>
+      /*???????????????????? id는 #을쓰고 class 는 .을 씀 무슨차이인지? */
+      /*??????????????????? css는 엘레먼트 속성이 중복되면 더 큰 개념적용 ex 넓이 높이 id가 class보다 높은 순위인듯
+       이거 순위 기준도 알아봐야할듯*/
+      .divc {
+        width: 150px;
+      }
+      #div2 {
+        width: 120px;
+      }
+
+      #div1 {
+        height: 100px;
+      }
+
+      div {
+        /* div라는 엘레먼트 전체에 적용이 가능 */
+        color: red;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      * {
+        /* *은 모든거에 적용한다는 뜻 */
+
+        box-sizing: border-box;
+        /* 높이 너비를 정할때 뭘 기준으로 할거냐 / border기준으로 잡으니까 큰틀이 정해지고 시작함 */
+        /* margin: 0; */
+        /* padding: 0; */
+        /* 여백들이 각각 너무 달라서 마진과 패딩을 0으로 일단 없애버리고 시작함 보통 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 창안에 뜨는 내용물들이 body안에 들어감 -> 인터넷 화면이 어떻게 보이는가 -->
+    <div class="divc" id="div2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <!-- class는 css랑 연동하려고 씀 -->
+    <div id="div2" class="divc">2</div>
+  </body>
+</html>
+
+<!-- 라이브서버 구동하는 단축키가 Alt+L+O -->
