@@ -1,0 +1,195 @@
+<!-- 
+    HTML -> HyperText Markup Language : 웹페이지를 작성하는 문서
+    구조적으로 이루어져있음. -> 논리X  
+    
+   - Tag, Tag 이름 (html, head, body, meta, div, ...)
+   - <***> 여는 태그
+   - </***> 닫는 태그
+   - 여는 태그가 있으면 닫는 태그가 있어야한다. <***/>는 예외 (자식이 없을 때)
+   - Element (각 개별 요소) 는 자바스크립트가서 자세히 다룸
+   - 여는 태그와 닫는 태그 사이에 자식 태그들이 있음.
+   자식태그-> 부모 태그
+ -->
+
+<html lang="kr">
+  <!-- html 태그 : html 파일의 시작과 끝 형식.
+    lang 즉 tag 이름을 제외한 나머지 세팅을 속성이라고 한다. (tag에 대한 설정)
+    lang 은 언어 설정.
+    -->
+
+  <head>
+    <!-- 
+        head : 브라우저에 여러가지 정보들을 전달 / 보통 페이지에 보이지 않음
+     -->
+    <meta charset="UTF-8" />
+
+    <!-- 
+        메타데이터 = 기본 정보를 전달한다
+        charset : 언어가 어떤 포멧이냐 
+          ㅣ-> UTF-8 : 자바스크립트 때 다시 (유니코드 중 하나임)
+     -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 
+    http-equiv : 웹 사이트가 어떤 호환성을 가지고 있느냐? javasrcipt를 어디까지 기용
+    content : 어떤 정보인지에 대한 내용
+     ㅣ-> IE=edgt -> internet explorer 의 버전이 edge 이다 -> 크롬말고 인터넷은 버전이 안맞을때가 많음.
+ -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+        name : 어떤 설정이냐, viewport라는 이름을 갖고있다. < 화면에 대한 내용. (ex 웹카메라)
+        content  : 속성 건드리는건데 어느정도의 너비인지, 줌의 설정값이 뭔지.
+        device-width 는 기기의 너비에 맞추겠다.
+        initial-scale 은 1.0이 기본확대값 / 
+        maximum-scale, minimum-scale 도 있음
+
+     -->
+
+    <title>4일차배움</title>
+    <!-- 
+        title : 웹페이지 이름. (위 표시줄에 뜨는 이름)
+        
+     -->
+
+    <!-- 
+        link, script, style 정보들도 헤드 안에서 줌
+      -->
+  </head>
+
+  <body>
+    <!-- 영역, div -->
+    <div>
+      <p>
+        단락, paragraph 단어의 약자, 블록화 되어있음. <br />
+        br은 줄바꿈이다 <br />
+        내용이 너비를 넘으면 디바이스 크기에 맞춰서 줄이 넘어감. <br />
+      </p>
+
+      <span> p와 거의 유사한데 인라인 속성을 가지고 있다. </span>
+      <pre>
+        p나 span이나 같은데 이 안에 작성한대로 나온다.
+    우헤헤헥 프리터가 수정도 하지 않음
+      </pre>
+      <h1>대제목</h1>
+      <h2>소제목</h2>
+      <h3>소제목1</h3>
+      <h4>소제목2</h4>
+      <h5>소제목3</h5>
+      <h6>분홍색 안경을 쓴 귀여운 댕댕이</h6>
+      <!-- hn 라인은 검색엔진이 순서대로 찾는다고함 -> 순서대로 써주는게 좋음
+            6번째 제목까지 있을 수 있음
+    --></div>
+
+    <div>
+      <img src="sunglassdog1.jpg" alt="이미지를 불러 올 수 없음" />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSkZiM0rK4Ii7jSAjLdACszDWnsdzSl8pqaA&usqp=CAU"
+        alt="이미지를 불러올 수 없음"
+      />
+
+      <!-- 
+            image
+            src = source : 이미지의 주소, 파일명
+            alt = 이미지를 정상적으로 받지 못했을 때 뜨는 경고
+            ./ << 현재위치 (src="./sunglass~~~.jpg")  -> node.js 에서 다르게 사용하게됨
+               ㅣ-> 지금은 그냥 ./를 안써도 같은 디렉토리 안에 있으면 사용 가능.
+            
+            이미지 포맷 : jpg, png, bmp 중 base64 라는 게 있는데 이건 텍스트로 이미지를 볼 수 있다.
+        -->
+    </div>
+    <p>
+      <strong>굵은 글씨 강조, 긴급한 내용 (ex: 알람)</strong> <br />
+
+      <b>그냥 굵은 글씨, 나중에 css에서 알 수 있다.</b><br />
+
+      <del>
+        삭제한 내용, 게시판에서 글을 삭제 -> 그 글을 관리자는 확인 가능해야함. </del
+      ><br />
+
+      <ins>
+        insert 입력한 내용, 늘어난 내용 게시판에 글을 적었을 때 신규 작성글같은
+        느낌 수정했을 때 사용가능
+      </ins>
+      <br /><br />
+
+      2의 제곱 <br />
+      2<sub>2</sub>
+      <!-- 아래 첨자가 들어감 -->
+
+      2<sup>2</sup><br />
+      <!-- 위 첨자가 들어감. -->
+      영어<sub>English</sub> <br /><br />
+
+      <i> 기울었어 </i> <br />
+      <em> 똑같이 기울었어 </em>
+      <!-- i 는 이름이나 제목같은 거에 주로 사용 + 인용할 때
+        em은 강조용
+        -->
+    </p>
+    <div>
+      style : 속성. 그 태그의 크기, 외곽선, 위치, 배경 등 다양하게 조정하는
+      기초적인 방법. 웹페이지를 html안에 다 담으면 보기도 어렵고 크기가 너무
+      커져버림. CSS 파일, Cascading Style Sheets 로 html파일 외부로 빼버림
+      <div style="width: 1000px">
+        <pre>
+너비나 높이나 숫자를 이용한 수치들에 대한 단위 : px, %, em, rem, vw, vh 정도
+        </pre>
+
+        px : 한 칸, 한 칸<br />
+        % : 부모를 기준으로 한 %, 100%는 부모의 너비<br />
+        em : 글씨 크기를 기준으로 함 (부모 엘레먼트의 글씨 크기임)<br />
+        rem : 글씨 크기를 기준으로함 (html의 글씨 크기임 -> 모바일,pc 한 번에
+        만들때 많이 사용)<br />
+        <div>
+          ex) 글씨크기가 16px 일때 1em, 1rem : 16px <br />
+          글씨크기가 32px, 1rem - 1em = 32px, 0.5rem = 16px
+        </div>
+        <pre>
+            vw, vh : viewport, 브라우저의 크기나 스마트폰의 크기를 기준으로 %
+            100vw : 화면의 너비  (viewportwidth)
+            
+            100vh : 화면의 높이  (viewportheight)
+        </pre>
+      </div>
+
+      <div style="width: 1000px">
+        <div style="max-width: 1000px; min-width: 100px">
+          %, vw , vh는 기준이 있고 그 기준의 비율로 너비를 설정하는데, <br />
+          최소 100px는 가지고 있어야 제대로 나와는 상황이다 -> min-width를 사용
+        </div>
+      </div>
+
+      <div style="height: 100px">
+        width 설정이랑 똑같음 / 단 max, min은 이미지 조절할 때 정도사용
+      </div>
+
+      <!-- 부모 엘레먼트에 있는 여백을 다 설정하고 자식이 나옴 -->
+      <div
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: rgb(200, 200, 200);
+          padding: 10px;
+          margin: 0px;
+        "
+      >
+        <!-- padding : 내부 여백 , 내부에 얼마나 빈 공간을 줄건지. -->
+        <div style="height: 100%; background-color: red; padding: 3px">
+          <div style="height: 100%; background-color: blue"></div>
+        </div>
+        <br />
+
+        <div
+          style="width: 100px; height: 100px; background-color: rgb(0, 0, 0)"
+        >
+          <!-- margin : 외부 여백 -->
+          <div
+            style="height: 100%; background-color: red; margin-top: 10px"
+          ></div>
+          <!-- 100%로 높이값을 고정시켜놓아서 마진이 밖으로 나간거임/ 고정이 안되어 있으면 부모값을 따라감 -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
