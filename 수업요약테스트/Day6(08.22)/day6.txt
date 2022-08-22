@@ -1,0 +1,24 @@
+https://developer.mozilla.org/ko/
+컴퓨터 용어 설명집
+
+2력서 만들면서 검색해본거
+
+?? <br/> 줄간격 포인트 조정
+br이 들어간 엘레멘트 요소 스타일안에
+ -> line-height: n% / npx ;
+
+
+ ?? 테이블 왼쪽 오른쪽 선 없애기
+ -> border-left = hidden
+ -> border-right-style = hidden
+    여기서 문제 hidden과 none의 차이는 무엇인가
+    border-style: hidden; 은 충돌하는 다른 모든 보더보다 우선순위가 높다.
+border-style: none; 은 가장 낮은 우선순위를 갖는다.
+ 이 가장자리에서 만나는 모든 요소의 보더 속성이 none인 경우에만 보더가 숨겨진다.
+  (하지만 border-style의 디폴트값이 none 이긴 함)
+어느 것도 border-style: hidden; 이 아니고, 
+그중 적어도 하나가 border-style: none이 아니라면 더 두꺼운 보더를 사용하게 된다.
+ 만약 여러 개가 동일한 border-width 를 갖는다면
+  double - solid - dashed - dotted - ridge - outset - groove - inset 순으로 우선순위가 낮아진다.
+테두리 스타일 중 border-color만 다른 경우,
+ 셀에 설정된 스타일이 row, row group, column, column group, table 동일한 유형의 두 요소가 충돌하면 좌측(테이블 방향을 오른쪽으로 지정했다면 우측) 상단의 요소가 우선시 된다.

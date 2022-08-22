@@ -1,0 +1,275 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이력서</title>
+
+    <style>
+      #nametable {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 80%;
+        border-left-style: hidden;
+        border-right-style: hidden;
+      }
+
+      #nametable td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      #nametable th {
+        border: 1px solid black;
+      }
+
+      #table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        border-left-style: hidden;
+        border-right-style: hidden;
+      }
+
+      #table td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      #table th {
+        border: 1px solid black;
+      }
+
+      #table h4 {
+        float: left;
+        margin: 0;
+        margin-left: 10px;
+      }
+
+      #back {
+        background-color: rgba(176, 176, 176, 0.527);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 750px; margin-left: 55px; line-height: 100%">
+      <h1 style="text-align: center">이 력 서</h1>
+      <br />
+      <br />
+      <!-- 이력서는 웹페이지 사이즈가 변함에따라 변하면 안된다고 생각해서 큰 div안에 넣어서 블록화 -->
+      <div>
+        <img
+          src="https://cdnweb01.wikitree.co.kr/webdata/editor/202202/21/img_20220221141552_2279936c.webp"
+          art="내 사진"
+          style="
+            width: 132px;
+            height: 170px;
+            float: left;
+            margin-right: 15px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 5px;
+          "
+        />
+
+        <!-- 성명 테이블 (왼쪽에 사진 여백 주고 남은만큼) -->
+        <table id="nametable" style="height: 170px">
+          <tr>
+            <th id="back">성명</th>
+            <td colspan="2">홍길동</td>
+            <th id="back">영문</th>
+            <td colspan="2">Hong Gil Dong</td>
+            <th id="back">한문</th>
+            <td>金榮俊</td>
+          </tr>
+
+          <tr>
+            <th id="back">생년월일</th>
+            <td colspan="5">2000년 01월 01일</td>
+            <th id="back">나이(만)</th>
+            <td>19세</td>
+          </tr>
+
+          <tr>
+            <th id="back">휴 대 폰</th>
+            <td colspan="2">010-1234-5678</td>
+            <th id="back">전화번호</th>
+            <td colspan="4">042-630-9681</td>
+          </tr>
+
+          <tr>
+            <th id="back">이 메 일</th>
+            <td colspan="7">color99q@naver.com</td>
+          </tr>
+          <tr>
+            <th id="back">주 소</th>
+            <td colspan="7">서울특별시 강동구 천호동 359-13 2층</td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <div style="line-height: 9px">
+        <!-- 표 사이들 간격 조정 -> line-height -->
+        <table id="table">
+          <th id="back">보훈대상자</th>
+          <td>해당 O &nbsp; &nbsp; X</td>
+          <th id="back">장애여부</th>
+          <td>해당 O &nbsp; &nbsp; X</td>
+        </table>
+        <br />
+
+        <!-- 학력사항 테이블 -->
+        <table id="table">
+          <!-- 학력 사항 옆이 작은 글씨기 떄문에 칸 나누고 오른쪽 줄 없앤거로 보임 -->
+          <tr>
+            <td
+              id="back"
+              colspan="5"
+              style="border-left: none; text-align: left"
+            >
+              <h4 style="float: left; margin: 0; margin-left: 10px">
+                학력사항
+              </h4>
+              &nbsp;(최종학력: 우송정보대학 졸업예정)
+            </td>
+          </tr>
+          <tr>
+            <th>재학기간</th>
+            <th>학교명 및 전공</th>
+            <th>학점</th>
+            <th>구분</th>
+            <th>소재지</th>
+          </tr>
+          <tr>
+            <td>2016.03 ~ 2020.02</td>
+            <td>백석예술대학교 컨텐츠방송학과</td>
+            <td>4.0 / 4.5</td>
+            <td>주간</td>
+            <td>서울</td>
+          </tr>
+          <tr>
+            <td>2017.02 ~ 2022.02</td>
+            <td>명지전문대 컴퓨터공학과</td>
+            <td>12.5 / 4.5</td>
+            <td>주간</td>
+            <td>서울</td>
+          </tr>
+        </table>
+        <br />
+
+        <!-- 자격증 테이블 -->
+        <table id="table">
+          <!-- 학력 사항 옆이 작은 글씨기 떄문에 칸 나누고 오른쪽 줄 없앤거로 보임 -->
+          <tr>
+            <td colspan="5" id="back">
+              <h4>자격증</h4>
+            </td>
+          </tr>
+          <tr>
+            <th>취득일</th>
+            <th>자격증/면허증</th>
+            <th>등급</th>
+            <th>발행처</th>
+          </tr>
+          <tr>
+            <td>2014.07</td>
+            <td>전자기기기능사</td>
+            <td>1</td>
+            <td>한국산업인력공단</td>
+          </tr>
+          <tr>
+            <td>2022.02</td>
+            <td>경일게임아카데미 신입생</td>
+            <td>최고보안</td>
+            <td>HRD-net & FBI</td>
+          </tr>
+        </table>
+        <br />
+        <!-- 주요활동 및 경력 테이블 -->
+        <table id="table">
+          <!-- 학력 사항 옆이 작은 글씨기 떄문에 칸 나누고 오른쪽 줄 없앤거로 보임 -->
+          <tr>
+            <td colspan="5" id="back">
+              <h4>주요활동 및 경력</h4>
+            </td>
+          </tr>
+          <tr>
+            <th>기간</th>
+            <th>활동내용</th>
+            <th>활동구분</th>
+            <th>기관명/업체명</th>
+          </tr>
+          <tr>
+            <td>2019.06.17 ~ 2019.07.12</td>
+            <td>지진계 장비 설치 및 유지 보수</td>
+            <td>실습</td>
+            <td>우송기술</td>
+          </tr>
+          <tr>
+            <td>2022.08.22 ~ 2023.05.23</td>
+            <td>핀테크 기반 블록체인 운용</td>
+            <td>교육</td>
+            <td>경일게임아카데미</td>
+          </tr>
+        </table>
+        <br />
+
+        <!-- 능력사항 테이블 -->
+        <table id="table">
+          <tr>
+            <td colspan="6" id="back">
+              <h4>능력사항</h4>
+            </td>
+          </tr>
+          <tr>
+            <th rowspan="3">OA능력</th>
+            <th>워드/한글</th>
+            <td>상 □ / 중 □ / 하 □</td>
+            <th rowspan="3">어학능력</th>
+
+            <th>영어</th>
+            <td>상 □ / 중 □ / 하 □</td>
+          </tr>
+          <tr>
+            <th>엑셀</th>
+            <td>상 □ / 중 □ / 하 □</td>
+            <th>일본어</th>
+            <td>상 □ / 중 □ / 하 □</td>
+          </tr>
+          <tr>
+            <th>파워포인트</th>
+            <td>상 □ / 중 □ / 하 □</td>
+            <th>기타(　　　)</th>
+            <td>상 □ / 중 □ / 하 □</td>
+          </tr>
+        </table>
+        <br />
+
+        <!-- 병역사항 -->
+        <table id="table">
+          <!-- 학력 사항 옆이 작은 글씨기 떄문에 칸 나누고 오른쪽 줄 없앤거로 보임 -->
+          <tr>
+            <td colspan="6" id="back">
+              <h4>병역사항</h4>
+            </td>
+          </tr>
+          <tr>
+            <th>복무기간</th>
+            <th>군별</th>
+            <th>계급</th>
+            <th>병과</th>
+            <th>전역사유</th>
+          </tr>
+          <tr>
+            <td>2018.04 ~ 2019.12</td>
+            <td>육군</td>
+            <td>병장</td>
+            <td>수송</td>
+            <td>병장만기전역</td>
+          </tr>
+        </table>
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
