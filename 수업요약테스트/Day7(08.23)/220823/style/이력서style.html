@@ -1,0 +1,356 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이력서style 양식</title>
+  </head>
+  <style>
+    td,
+    tr,
+    th {
+      border: 1px solid black;
+      text-align: center;
+    }
+    #total {
+      height: 90%;
+    }
+    table {
+      height: 95%;
+    }
+    .space {
+      border-bottom: 1px solid #fff;
+      border-left:hidden;
+      border-right: hidden;
+    }
+    .caption{
+        text-align: center; 
+        font-size: large;
+    }
+    .intro{
+        background-color: rgb(192, 189, 189);
+    }
+    .lhidden{
+        border-left:hidden;
+    }
+    .rhidden{
+        border-right: hidden;
+    }
+    .rfloat{
+        float:right;
+    }
+    td.lhidden{
+        border-left:hidden;
+        text-align: center;
+    }
+    td.rhidden{
+        border-right:hidden;
+        text-align: center;
+    }
+    .intro1 > .rhidden{
+        text-align: left;
+    }
+    .timg{
+        border: 2px solid #fff;
+        border-left: hidden;
+        border-right: hidden;
+    }
+    .img{
+        height: 100%;
+        border: 3px solid black;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+        float: left;
+        margin-right: 0;
+    }
+    .title1{
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+    td.title1{
+        text-align: left;
+        background-color: rgb(192, 189, 189);
+        border-left: hidden;
+        border-right: hidden;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+    #intro{
+        border-top:3px solid black;
+    }
+    .ans{
+        text-align:left;
+    }
+    .tfoot{
+        border-right: hidden;
+        border-bottom: hidden;
+        border-left: hidden;
+    }
+    .chidden{
+        background-color: rgb(192, 189, 189);
+        border-left: hidden;
+    }
+    #main{
+        border-collapse: collapse;
+        margin-left :auto;
+        margin-right: auto;
+    }
+    .col_h{
+        width:90px;
+    }
+  </style>
+  <body>
+    <div id="total">
+      <table id="main">
+        <caption class="caption">
+          <h2>이력서</h2>
+        </caption>
+        <tbody>
+          <col class="col_h" />
+          <div>
+            <tr rowspan="3" class="space"></tr>
+          </div>
+            <tr>
+              <td colspan="2" rowspan="7" class="timg">
+                <img src="./kakao_12.jpg" alt="이미지" class="img"/>
+              </td>
+            </tr>
+          </div>
+          <div>
+            <tr></tr>
+            <tr id="intro">
+              <td class="intro">성명</td>
+              <td class="ans">장정현</td>
+              <td class="intro">영문</td>
+              <td class="ans">JangJeongHyun</td>
+              <td class="intro">한문</td>
+              <td class="rhidden">張晶賢</td>
+            </tr>
+            <tr>
+              <td class="intro">생년월일</td>
+              <td colspan="3" class="ans">1994년 02월 14일</td>
+              <td class="intro">나이</td>
+              <td class="rhidden">29세</td>
+            </tr>
+            <tr>
+              <td class="intro">휴대폰</td>
+              <td class="ans">010-2052-9649</td>
+              <td class="intro">전화번호</td>
+              <td colspan="3" class="rhidden">-</td>
+            </tr>
+            <tr class="intro1">
+              <td class="intro">이메일</td>
+              <td colspan="5" class="rhidden">ghkdwja9649@gmail.com</td>
+            </tr>
+            <tr class="intro1">
+              <td class="intro">주소</td>
+              <td colspan="5" class="rhidden">서울시 송파구 위례 순환로 477</td>
+            </tr>
+          </div>
+          <div>
+            <tr class="space">
+              <td colspan="6"></td>
+            </tr>
+          </div>
+          <div>
+            <tr class="title1">
+              <td colspan="2" class="chidden">보훈 대상자</td>
+              <td colspan="2">해당 □&nbsp;/&nbsp;해당없음 ■</td>
+              <td colspan="2" class="intro">장애여부</td>
+              <td colspan="2" class="rhidden">해당 □&nbsp;/&nbsp;해당없음 ■</td>
+            </tr>
+          </div>
+          <div>
+            <tr class="space">
+              <td colspan="6"></td>
+            </tr>
+          </div>
+          <div>
+            <tr class="title1">
+              <td
+                colspan="8" class="title1"><b>학력사항</b> (최종학력)</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden"><b>재학기간</b></td>
+              <td colspan="2"><b>학교명 및 전공</b></td>
+              <td><b>학점</b></td>
+              <td><b>구분</b></td>
+              <td colspan="2" class="rhidden"><b>소재지</b></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">2010.03 ~ 2012.02</td>
+              <td colspan="2">배재고등학교</td>
+              <td>3</td>
+              <td>졸업</td>
+              <td colspan="2" class="rhidden">강동</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">2013.03 ~ 2015.02</td>
+              <td colspan="2">숭실대학교 평생교육원</td>
+              <td>-</td>
+              <td>수료</td>
+              <td colspan="2" class="rhidden">서울 동작구</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">2020.03 ~ 2022.02</td>
+              <td colspan="2">대진대학교</td>
+              <td>3</td>
+              <td>졸업</td>
+              <td colspan="2" class="rhidden">경기 포천</td>
+            </tr>
+          </div>
+          <div>
+            <tr class="space">
+              <td colspan="6"></td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td colspan="8" class="title1"><b>자격증</b></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden"><b>취득일</b></td>
+              <td colspan="3"><b>자격증/면허증</b></td>
+              <td><b>등급</b></td>
+              <td colspan="2" class="rhidden"><b>발행처</b></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">2014.04</td>
+              <td colspan="3">네트워크 관리사2급</td>
+              <td>2급</td>
+              <td colspan="2" class="rhidden">?</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">2018.07</td>
+              <td colspan="3">행정관리사 3급</td>
+              <td>3급</td>
+              <td colspan="2" class="rhidden">?</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">&nbsp;</td>
+              <td colspan="3">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td colspan="2" class="rhidden">&nbsp;</td>
+            </tr>
+          </div>
+          <div>
+            <tr class="space">
+              <td colspan="6"></td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td colspan="8" class="title1"><b>주요활동 및 경력</b></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden"><b>기간</b></td>
+              <td colspan="3"><b>활동내용</b></td>
+              <td><b>활동구분</b></td>
+              <td colspan="2" class="rhidden"><b>기관명/업체명</b></td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">2022.05 ~</td>
+              <td colspan="3">홀 서빙 및 주방 보조</td>
+              <td>아르바이트</td>
+              <td colspan="2" class="rhidden">노랑통닭</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">&nbsp;</td>
+              <td colspan="3">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td colspan="2" class="rhidden">&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="lhidden">&nbsp;</td>
+              <td colspan="3">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td colspan="2" class="rhidden">&nbsp;</td>
+            </tr>
+          </div>
+          <div>
+            <tr class="space">
+              <td colspan="6"></td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td colspan="8" class="title1"><b>능력사항</b></td>
+            </tr>
+            <tr>
+              <td rowspan="3" class="lhidden">OA능력</td>
+              <td>워드/한글</td>
+              <td colspan="2">상 □ / 중 □/ 하 ■</td>
+              <td rowspan="3">어학능력</td>
+              <td>영어</td>
+              <td colspan="2" class="rhidden">상 □ / 중 □/ 하 ■</td>
+            </tr>
+            <tr>
+              <td>엑셀</td>
+              <td colspan="2">상 □ / 중 □/ 하 ■</td>
+              <td>일본어</td>
+              <td colspan="2" class="rhidden">상 □ / 중 □/ 하 ■</td>
+            </tr>
+            <tr>
+              <td>파워포인트</td>
+              <td colspan="2">상 □ / 중 □/ 하 ■</td>
+              <td>기타(  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; )</td>
+              <td colspan="2" class="rhidden">상 □ / 중 □/ 하 □</td>
+            </tr>
+          </div>
+          <div>
+            <tr class="space">
+              <td colspan="6"></td>
+            </tr>
+          </div>
+          <div>
+            <tr>
+              <td colspan="8" class="title1"><b>병역사항</b></td>
+            </tr>
+            <tr>
+              <td class="lhidden">복무기간</td>
+              <td>군별</td>
+              <td>계급</td>
+              <td>병과</td>
+              <td colspan="4" class="rhidden">전역사유</td>
+            </tr>
+            <tr>
+              <td class="lhidden">2015.11 ~ 2017.08</td>
+              <td>군필</td>
+              <td>병장</td>
+              <td>행정계원</td>
+              <td colspan="4" class="rhidden">만기전역</td>
+            </tr>
+            <tr>
+              <td colspan="8" class="tfoot">
+                <div class="rfloat">                  
+                  <span>위에 기재한 사항은 사실과 틀림이 없습니다</span><br />
+                  <span class="rfloat"><b>2022년 08월 22일</b></span><br />
+                  <span class="rfloat"><b>성명 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장 정 현 (인)</b></span>
+                </div>
+              </td>
+            </tr>
+          </div>
+        </tbody>
+        <!-- <tfoot id="foot">
+          <tr>
+            <td colspan="8" style="text-align: right">
+              위에 기재한 사항은 사실과 틀림이 없습니다
+            </td>
+          </tr>
+          <tr>
+            <td colspan="8" style="text-align: right">
+              <b>2022년 08월 22일</b>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="8" style="text-align: right">
+              <b>성명 : 장정현 (인)</b>
+            </td>
+          </tr>
+        </tfoot> -->
+      </table>
+    </div>
+  </body>
+</html>

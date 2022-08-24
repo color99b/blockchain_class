@@ -1,0 +1,144 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>style</title>
+    <style>
+      /* 
+        태그들의 스타일 속성을 모아뒀다. 미리 설정 한다.
+        style 태그 내에서 쓰는 문법(방식)은 CSS 작성 방식과 같게 사용한다.
+        div, body, h1 등의 태그에 스타일을 한번에 적용할 수 있다.
+        */
+      div {
+        background-color: aqua;
+        min-height: 10px;
+      }
+      * {
+        /* 
+            * 은 모든 태그에 적용한다.
+            여러 곳에서 * 이 사용 될 수 있으며 CSS 문법에서는 모든 태그에 설정 할 때 사용한다.
+        */
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      #test {
+        /* #은 태그의 id 속명을 찾아 style을 적용한다.*/
+        background-color: lightgray;
+      }
+      .test {
+        /* .은 태그의 class 속명을 찾아 style을 적용한다.*/
+        background-color: lightcoral;
+      }
+
+      /* 
+        스타일이 적용 되는 순서(우선순위)
+        태그의 기본 값(default) -> 스타일에서 태그명으로 설정된 스타일(ex. css.style.body / css.style.div / css.style.tr 등) 
+        -> .class명으로 설정된 스타일 -> #아이디(id)로  설정된 스타일 -> style 속성을 인라인으로 태그안에 설정된 스타일
+      
+        CSS 문법 .test#test
+        * -> 계산식 돌려봐
+        계산식 =>
+        div, h1, body 등의 태그명 = 1
+        .class 등의 클래스명 = 2
+        #id  등의 아이디명 = 3
+        p.test = 3 (태그명과 클래스명)
+        p.#test.test = 6
+        .parent > .child2 = 4
+        제일 큰게 살아 남는다. 최종적으로 적용 된다.
+        div .test = 3 > .test = 2 
+        */
+
+      p.test {
+        /* p 태그인데 test 클래스명을 갖고 있다.*/
+        background-color: blue;
+      }
+      p#test.test {
+        /* 붙여서 쓴 이름은 하나의 태그에서 찾는다? 하나의 태그에 전부 있어야 찾을 수 있다.*/
+        background-color: orange;
+      }
+
+      p.test.test001 {
+        background-color: skyblue;
+      }
+
+      .parent {
+        width: 300px;
+        height: 300px;
+        background-color: brown;
+      }
+
+      .child1,
+      .parent > .child2 {
+        /*
+            ,로 여러 클래스를 한번에 적용 가능하다.
+            >는 바로 하위(직속, 1촌) 자식만을 찾는다. (손자, 증손자 태그 등 찾지 않는다.)
+        */
+        width: 200px;
+        height: 100px;
+        margin: auto;
+        background-color: cornsilk;
+      }
+
+      .child2 {
+        width: 100px;
+        /* 
+        calc(*** - ***) 는 단위와 상관 없이 계산을 해준다.
+        ex) calc(100% - 10px) => 100%가 100px이면 계산 해서 90px로 설정 해준다.
+                                100%가 4234px이면 42224px로 설정 해준다.
+        width: calc(100%-10px); 
+        px, %, vw, vh, em, rem 등 단위가 들어가는 css명령어에는 계산식으로 넣어서 크기조절이 가능하다.
+        */
+        height: 50px;
+        margin: auto;
+        background-color: red;
+      }
+
+      .parent .child3 {
+        /*
+        parent 클래스 가진 태그에 자식들 중 child1 클래스를 가진 태그를 찾는다.
+        띄어쓰기는 자식을 찾는다. 모든 자식태그들에서 찾는다.(자식을 포함하여 증손자, 손자 등 모든 태그를 찾는다.)
+        child3으로 수정.
+        */
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="test" class="test">#test.test</div>
+    <div class="test">.test</div>
+    <div class="test test001">.test, .test001</div>
+    <!--class를 두개를 가진다. test, test001-->
+    <p class="test">p.test</p>
+    <p id="test" class="test">p#test.test</p>
+    <!--
+        class 는 이름 그대로 반이다. << 라고 생각하면 편하다
+        여러 태그들에게 공통된 속성이나 공통된 태그라면 class 속성을 설정하여
+        한번에 처리한다.
+        구조에서 하나의 태그로 묶어서 자식으로 처리해도 되지만, class로 처리하면 더 깔끔하게 볼 수 있다.
+        
+        id는 identity << 하나만 설정 가능한 이름이다.
+        태그들 끼리 중복되면 안된다.
+        html 상에서는 중복 체크를 안하지만 javaScript 쓸 때 후회 한다.
+    -->
+    <div style="background-color: red; min-height: 10px">div1</div>
+    <div style="background-color: red; min-height: 10px">div2</div>
+    <!-- 
+        <ol>
+            <li>test</li>
+        </ol> 
+    -->
+    <div class="parent">
+      <div class="child1">
+        <div class="child2"></div>
+      </div>
+      <div class="child1">
+        <div class="child2 child3">.child2.child3</div>
+      </div>
+      <div class="child2">
+        <div class="child2">.child2</div>
+      </div>
+    </div>
+  </body>
+</html>
