@@ -1,0 +1,17 @@
+div {
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text {
+  font-style: italic;
+}
+
+#main_div {
+  width: 850px;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.5);
+}

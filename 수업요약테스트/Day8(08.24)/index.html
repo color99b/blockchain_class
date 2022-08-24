@@ -1,0 +1,217 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <!-- 
+    index.html은 서버에서 자동으로 읽어서 찾아줌 (서버에 연결된 디렉토리에 있으면 제목이 index여야함 default 값)
+    이미지같은 경우는 .png 로 주소창에 따로 나오는데
+ -->
+
+    <!-- 
+    서버에 정보를 날라줄때 
+    ex)
+    id  : rudgns
+    pass : *****
+    이름은 정경훈
+    직업은 교수
+    취미는 게임
+
+    왼쪽이 name / 어떤 정보들인건지
+    오른쪽이 value / 그 정보에 해당하는 값이 뭔지  
+  -->
+
+    <form action="#" method="get">
+      <!-- 
+            사용자가 입력하는 데이터를 서버에 보내주는 태그
+            자세한건 자바스크립트에서 / 지금은 모양과 입력만
+            POST, GET ..., 등은 서버 들어가서 함
+            table, ol, ul 처럼 form 부모로써 쓴다.
+            
+            action 속성은 '어디' 에 보낼지 서버의 주소를 입력한다.
+            # -> W3C에서 주소가 없을 때 넣도록 권장함
+            method 속성은 데이터를 어떤 방식으로 보낼건지 설정. ex) get, post
+                ㅣ-> get은 주소에 입력데이터가 나온다.
+            target << a랑 같다. (거의 쓰지 않음)
+         -->
+
+      <fieldset>
+        <!-- 
+                이 태그는 form 안의 영역을 구분해준다.
+                div를 사용해도 됨
+                style이 있어서 넣기만 해도 눈에 보인다.
+         -->
+        두둥타다다닥
+        <legend>필드셋의 제목</legend>
+        <input type="text" id="text" name="ersar" />
+        <!-- 
+            input 태그는 이름 그대로 사용자가 데이터를 입력하는 영역이다. 
+            데이터 타입은 다양하다. ex) text, 
+            name -> 서버에 보낼 때 어떤 이름을 갖고 있는지, 데이터에 대한 이름을 같이 보낸다.
+                ㅣ-> 자바스크립트 쓰면 사용 거의 안함.
+            id 속성은 label 태그와 연결하기 위해 사용한다.
+                
+        -->
+        <label for="text">아무거나 입력하시오</label> <br />
+        <!-- 
+            label 태그는 입력 값에 대한 제목을 사용자에게 보여준다
+            ex) 성명, 이름, 번호, 메일 등
+            for 속성은 input 태그와 연결하기 위해 사용한다.
+            클릭시 연결된 input에 입력이 가능하게 해줌 (focus)
+         -->
+        <label for="pw"
+          >비밀 번호 : <input type="password" name="pw" id="pw"
+        /></label>
+        <!-- 
+            type 속성이 password 값을 가지는 input 태그는 비밀번호를 입력할 수 있게해줌,
+               ㅣ-> 입력된 데이터를 알아서 가려준다.
+         -->
+
+        <label for="tel"
+          >전화 번호 : <input type="tel" name="tel" id="tel"
+        /></label>
+        <!-- 
+            text랑 다를게 없음 나중에 자바스크립트로 번호만 받게해서 잘 안씀
+         -->
+
+        <div>
+          <label for="number"> 나이 : </label>
+          <input type="number" id="number" name="age" />
+        </div>
+        <div>
+          <label for="url">주소를 입력해주세용</label>
+          <input type="url" id="url" name="url" />
+        </div>
+        <div>
+          <label for="search">주소를 입력해주세용</label>
+          <input type="search" id="search" />
+        </div>
+        <div>
+          <label for="email">이메일을 입력해주세용</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+          <label for="checkbox">동의하시겠습니까?</label>
+          <input type="checkbox" id="checkbox" checked />
+          <!-- 
+                checked 속성을 사용하면 클릭된 상태로 출력된다.
+             -->
+        </div>
+        <div>
+          좋아하는 과일은?
+          <input type="radio" id="radio1" name="radio" />
+
+          <label for="radio1">사과</label>
+          <input type="radio" id="radio2" name="radio" />
+          <label for="radio2">오렌지</label>
+          <input type="radio" id="radio3" name="radio" />
+          <label for="radio3">바나나</label>
+          <input type="radio" id="radio4" name="radio1" />
+          <label for="radio4">중복되는 과일</label>
+          <!-- 
+            하나만 선택하는 여러개의 체크박스
+            중복을 체크할 때 name을 사용한다.
+            name이 같은 라디오들끼리만 하나만 체크가능
+            radio는 체크박스처럼 다시 클릭으로 풀지 못함. 다른 걸 체크해서 체크를 빼야함
+           -->
+        </div>
+        <div>
+          <input type="text" id="test1" />
+        </div>
+
+        <input type="file" />
+
+        <!-- ===================================================================================== -->
+        <input
+          type="image"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4xcjNKwY0SNuD-1RnNaKmBk2SE30jzRUBw&usqp=CAU"
+        />
+        <!-- 
+            버튼을 이미지로 출력할 때 사용
+            image 를 넣어서 버튼을 대체할 수 있음.
+            위 코드 아래 코드 둘 다 같은 기능임
+        -->
+        <button>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ4xcjNKwY0SNuD-1RnNaKmBk2SE30jzRUBw&usqp=CAU"
+            alt=""
+          />
+        </button>
+        <!-- =================================================================================== -->
+        <!-- <div style="cursor: pointer" onclick="">보내기</div>
+            위 코드로도 버튼같이 만들수 있음. 꼭 버튼을 써야하는 건 아님.
+        -->
+
+        <div>
+          <label for="birthday">생일은</label>
+          <input type="date" id="birthday" />
+        </div>
+        <!-- 
+            달력 눌렀을 때 나오는 화면 커스텀 가능 / 라이브러리 끌어다가 남이 만든거 사용가능
+         -->
+
+        <div>
+          <input type="color" />
+        </div>
+
+        <button type="reset">입력값 초기화</button>
+
+        <textarea cols="30" rows="10"></textarea>
+        <!-- 
+            type="text"는 엔터치면 바로전송
+            이거는 엔터치면 다음줄로 내려가서 여러줄 전송가능.
+            안에 이미지도 넣을 수 있다는데 알아봐야함.
+         -->
+
+        <select>
+          <!-- 선택하는 입력값, 다만 한 칸에 보여준다. -> 아래화살표 클릭시 펼쳐지는 리스트 -->
+          <option value="seoul">서울</option>
+          <option value="1">경기도</option>
+          <option value="2">인천</option>
+          <option value="3">강원도</option>
+          <!-- 
+            option은 선택할 메뉴들이고
+            value는 보낼 데이터 << 중요함
+            option으로 선택했을 때의 대응하는 value 값을 서버에 전송함.
+            option은 무조건 select의 자식으로 들어가야한다.
+         -->
+        </select>
+
+        <input
+          type="text"
+          placeholder="미입력시 출력되는 텍스트 회색글씨로 나오고 입력시 사라집니다"
+          autofocus
+        />
+        <!-- autofocus 속성은 페이지를 열 때 자동으로 커서를 올려준다. -->
+
+        <button type="submit">
+          <!-- 
+                이름그대로 버튼
+                보통 a는 다른 웹페이질 이동할 때 사용하고( 딱 이동만 할 때)
+                버튼은 거의 다 씀
+                기본적으로 작동하는 기능이 없어서 자바스크립트를 넣어야 오브젝트가 작동함
+
+                type은 어떠한 작동을 할 것인지 기본 작동을 설정함.
+                submit 은 form 데이터를 보낼때 사용
+             -->
+          보내기
+        </button>
+      </fieldset>
+    </form>
+    <div>
+      <label for="test1">클릭 테스트</label>
+      <!-- 
+        label의 for랑 input의 id 속성만 같은 값을 가지면 서로의 부모태그 및 위치 상관없이
+        라벨 클릭시 input으로 커서가 이동한다.
+       -->
+    </div>
+    <a href="#">
+      <!-- 
+            a도 넣을 어디가 없으면 #을 사용
+         -->
+    </a>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-image: url(image1.jpg); background-repeat: no-repeat">
+    <div id="main_div">
+      <div style="width: 800px">
+        <div>
+          <h1>회원가입</h1>
+          <h2>
+            샤워후 거울을 볼때마다! <br />
+            괜찮다고 느껴진다면 가입을 지원하세요
+          </h2>
+        </div>
+
+        <form action="#" method="get">
+          <div style="width: 800px">
+            <input type="text" placeholder="아이디 입력 (6~20자)" />
+            <button>중복확인</button><br /><br />
+            <input
+              type="password"
+              placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20글자"
+            /><br /><br />
+            <input type="password" placeholder="비밀번호 재입력" /><br /><br />
+            <label for="birthday"
+              >이메일 택1 <input type="checkbox" id="email" />
+            </label>
+            <input type="email" placeholder="@를 포함한 전체주소" /><br /><br />
+            <label for="birthday"
+              >이메일 택2 <input type="checkbox" id="email" />
+            </label>
+
+            <input type="text" placeholder="@를 포함하지 않은 주소" /> @
+            <select name="potal" id="web">
+              <option value="naver">naver.com</option>
+              <option value="daum">daum.net</option>
+              <option value="gmail">gmail.com</option>
+              <option value="other">
+                <label for="other1"> 기타 사이트</label>
+              </option>
+            </select>
+            <!-- 기타 사이트를 눌렀을때 옆으로 이동하는법?
+            기타 사이트 누르기전에는 네모가 안나오게 하는 방법
+        -->
+            <input type="text" id="other1" display="none" /><br /><br />
+
+            <label for="birthday">생일</label>
+            <input type="date" /><br /><br />
+
+            <label for="number">전화번호</label>
+            <input
+              type="number"
+              placeholder="     '-'를 제외한 전화번호"
+            /><br /><br />
+
+            <label for="faceage">본인의 잘생긴 척도</label><br />
+
+            <input type="radio" name="faceage" id="r1" />
+            <label for="radio1">흔하다</label>
+            <input type="radio" name="faceage" id="r2" />
+            <label for="radio2">개성있다</label>
+
+            <input type="radio" name="faceage" id="r3" />
+            <label for="radio3">나 정도면 괜찮다</label>
+
+            <input type="radio" name="faceage" id="r4" />
+            <label for="radio4">어디가서 꿀리지 않는다</label>
+
+            <input type="radio" name="faceage" id="r5" />
+            <label for="radio5">말해뭐해 박보검</label>
+
+            <br /><br />
+
+            본인의 매력어필 & 포부<br />
+
+            <textarea
+              cols="29"
+              rows="14"
+              style="
+                background-image: url(winter1.jpg);
+                background-repeat: no-repeat;
+                opacity: 0.4;
+              "
+            >
+asd</textarea
+            >
+            <br /><br /><br /><br /><br />
+            <button><a href="index.html">뒤로가기</a></button>
+            <button><a href="false.html">가입하기</a></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+div {
+  width: 90%;
+}
+
+#logo {
+  height: 40%;
+}
+
+#login {
+  height: 20%;
+  background-color: blue;
+}
+
+#main {
+  height: 40%;
+  background-color: yellow;
+}
+
+.logo_size {
+  width: 150px;
+  height: 130px;
+}
+
+button {
+  border: 0;
+}
+
+.logo_image {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 10px;
+}
+
+h3 {
+  float: left;
+  letter-spacing: 1.5px;
+  font-style: italic;
+  margin-top: 35px;
+}
