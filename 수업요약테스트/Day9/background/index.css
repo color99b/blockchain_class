@@ -1,0 +1,33 @@
+.background {
+  width: 200px;
+  height: 200px;
+
+  background-color: aqua;
+
+  /* 배경 이미지 넣기 */
+  background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MDlfMzAg%2FMDAxNjYwMDIzMDIzMzEx.iZmDlnXP6vGSOgfXOp5VakIPvJSM9ixRq-R1I33lLZQg._PqwAvFc0eYCfQYTYLBYxHiuRKaOYKo-MfQnYQEIId8g.JPEG.dajung7292%2FIMG_6052.jpg&type=a340);
+
+  /* 그림을 다 보이게 (화면에 차게 윗공간이나 옆공간이 빌 수 있음) */
+  background-size: contain;
+
+  /* 그림을 화면에 억지로 꽉채움 */
+  background-size: cover;
+
+  /* 사이즈 지정 */
+  background-size: 100px 100px;
+
+  /* 위치 지정 x,y */
+  background-position: 10px 10px;
+
+  /* 위치 가운데 맞춤 */
+  background-position: center;
+
+  /* 배경 반복 여부 */
+  background-repeat: no-repeat;
+
+  /* x축만 반복 */
+  background-repeat: repeat-x;
+
+  /* y축만 반복 */
+  background-repeat: repeat-y;
+}

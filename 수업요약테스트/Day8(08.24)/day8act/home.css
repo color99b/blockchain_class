@@ -38,3 +38,19 @@ h3 {
   font-style: italic;
   margin-top: 35px;
 }
+
+.main_flex {
+  position: relative;
+  display: flex;
+  left: 170px;
+  top: 0px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main_item {
+  min-width: 10px;
+  min-height: 10px;
+  background-color: aqua;
+  border: 1px solid red;
+}
