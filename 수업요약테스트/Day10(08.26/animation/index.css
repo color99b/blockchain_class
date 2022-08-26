@@ -1,0 +1,110 @@
+div {
+  border: 1px solid black;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.transform-translate img {
+  transform: translate(100px, 100px);
+  /* transform 모양 이동? 수정? */
+  /* translate 함수는 이동 */
+}
+
+.transform-translateX img {
+  transform: translateX(100px);
+
+  /* x축이동 */
+}
+
+.transform-translateY img {
+  transform: translateY(100px);
+
+  /* y축이동 */
+}
+
+.transform-scale img {
+  transform: scale(0.5, 2);
+  /* 
+  scale - 확대 / 1이 기본크기 / 배율이라고 생각하면 됨 / 0.5 = 50%
+  */
+}
+
+.transform-skew img {
+  /* deg는 각도를 나타냄*/
+  /* skew는 사진 비틀림회전(x축,y축) -> 마름모를 만들 수 있음
+  주축을 기준으로 
+  x축으로 10도는 오른쪽
+  y축으로 10도는 아래쪽으로 */
+  transform: skew(10deg, 10deg);
+  transform-origin: 0 0;
+}
+
+.transfrom-rotate img {
+  /* z축회전: 우리가 봤을땐 축이 점이다 */
+  transform: rotate(45deg);
+}
+
+.transfrom-orgin img {
+  transform: rotate(45deg);
+
+  /* origin은 기준이 되는 축의 좌표이다 (아이템의 좌측상단을 여기 좌표에 붙이고 거기서 속성(돌리기 등)을 준다 */
+  transform-origin: 0 0;
+}
+
+.transition img {
+  /* transform에 대한 시간과 방법에 대한 설정 */
+  transition: transform 3s linear, border 1s ease-in-out,
+    border-radius 1s ease-in-out;
+  transform: rotate(720deg);
+  border: 0px dashed;
+}
+
+.transition:hover img {
+  border: 10px dashed red;
+  border-radius: 100%;
+}
+
+/* 애니메이션을 설정한다. */
+@keyframes myanimation {
+  0% {
+    /* from */
+    /* 전체 시간의 0%일때 */
+    transform: rotate(0);
+  }
+
+  /* 전체 시간의 50%일때 */
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  /* to */
+  /* 전체 시간의 100%일때 */
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.animation:hover img {
+  /* 애니메이션 : 키프레임즈의이름 / 시간 / 변환홤수  */
+  animation: myanimation 3s ease;
+}
+
+.animation:hover .test {
+  /* 애니메이션 : 키프레임즈의이름 / 시간 / 변환홤수  */
+  animation: myanimation 3s ease;
+}
+
+.animation {
+  position: relative;
+}
+
+.test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 700;
+  background-color: aqua;
+}

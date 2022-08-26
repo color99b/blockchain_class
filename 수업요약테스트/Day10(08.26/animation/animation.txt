@@ -1,0 +1,28 @@
+?? div안에 overflow 속성은 무엇인가.
+
+@transform 으로 다양한 변화주기 가능
+-translate : x,y축 이동
+-skew : x축,y축 비틀기 (마름모)
+-origin : 주축설정 ( 아이템 좌측상단을 기준으로 잡는 지점 설정 )
+-rotate : 회전
+
+
+@transition 으로 다양한 변화주기 가능- > css 스타일이 변화하는 것에 대해 설명
+- 다양한 함수가 있음 찾아봐야함
+ex) transition : transform 3s ease, border 1s ease-in-out; 
+트랜지션 : 변할속성 변할시간, 변환함수
+
+
+
+@keyfrime
+css에 선언할때 @keyfrime 원하는이름 {
+    
+    0%{}
+    50%{}
+    100%{}
+    }
+
+
+0~100 말고 from ~ to 로 해도됨
+
+    ㅣ-> 나중에 animaition : 키프레임이름 3s라 할때 3s의 0%, 50%, 100% 전체 시간의 %를 의미함

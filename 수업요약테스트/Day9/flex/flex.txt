@@ -1,0 +1,12 @@
+@ 수평정렬하는데 굉장히 유용하다.
+    요소의 크기가 불분명하거나 동적인 경우에도, 각 요소를 정렬할 수 있는 효율적인 방법을 제공한다.
+
+@ Container 와 item으로 나눌 수 있으며,
+    Container에는 display , flex-flow , justif-content 등을 세부 속성으로 두고
+    item 에는 aling-self , flex, order 등을 속성으로 둔다
+    ---::> 두 가지는 서로 속성을 다르게 가지고 있다.
+
+@ Container의 자세한 속성설명
+- display : flex Container의 정의
+- flex-flow : flex-direction과 flex-wrap의 단축속성
+- flex-direction : flex item들의 진행 주 축(main-asis) 설정 

@@ -1,0 +1,129 @@
+.grid {
+  /* 그리드 박스를 만든다 -> 부모역활 */
+  display: grid;
+
+  /* gird박스의 세로높이 결정 row(행)의수만큼 입력한다 */
+  /* grid-template-rows: 200px 200px; */
+
+  /* 그리드박스의 가로너비를 결정한다. column(열)의 수만큼 입력한다 */
+  /* grid-template-columns: 100px 100px 100px;
+
+  grid-template-rows: repeat(2, 200px);
+
+  grid-template-columns: repeat(3, 100px); */
+
+  grid-template-rows: repeat(3, 200px);
+
+  grid-template-columns: repeat(5, minmax(100px, 300px));
+
+  /* 세로 간격 */
+  row-gap: 10px;
+
+  /* 가로 간격 */
+  column-gap: 20px;
+
+  /* gird_item 의 진행 방향을 설정한다. */
+  /* grid-auto-flow: column; */
+
+  /* 
+  grid-template-areas는 grid 박스를 설정한다
+  하나의 row(column 설정)는 " " 로 설정하고, 여러 row일 경우 줄바꿈으로 처리한다.
+  .을 설정할 경우 빈칸이 된다.
+  무조건 사각형이여야한다.
+  item의 스타일에 grid-area와 매칭한다.
+  */
+
+  /* 이름 하나당 하나의 사각형 */
+  grid-template-areas:
+    "sidebar header header header1 header1"
+    "sidebar content content content content"
+    "sidebar footer footer footer footer";
+
+  /* 세로 기준으로 위치를 결정 */
+
+  /* 
+  가로기준 시작 끝
+  align-items: center;
+  align-items: start;
+  align-items: end;
+  align-items: stretch; */
+
+  /*
+  세로기준 시작 끝 
+  justify-items: stretch ;
+  justify-items: start;
+  justify-items: center;
+  justify-items: end; */
+}
+
+.grid_item {
+  background-color: #ffff00;
+  border: 1px solid black;
+}
+
+.sidebar {
+  /* grid-area는 부모 grid 박스의 grid-template-areas 와 매칭한다. */
+  grid-area: sidebar;
+  background-color: royalblue;
+}
+
+.header {
+  grid-area: header;
+  background-color: aqua;
+}
+
+.header1 {
+  grid-area: header1;
+  background-color: rgb(38, 255, 0);
+}
+
+.content {
+  grid-area: content;
+  background-color: azure;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: wheat;
+}
+
+.sidebar > div {
+  height: 20px;
+  color: red;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.sidebar > div:last-child {
+  margin-bottom: 0px;
+}
+
+.mosic {
+  /* 그리드박스 설정 */
+  display: grid;
+  /* 기본 보여질 틀 설정 가로세로 2줄 100px */
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 100px);
+}
+.mosic div {
+  background-color: antiquewhite;
+  border: 1px solid black;
+}
+
+.mosic_item {
+  display: none;
+}
+
+.mosic:hover {
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  grid-template-rows: repeat(3, 100px);
+}
+
+/* 마우스가 있을 때 자식 중 mosic_item 클래스를 가진 영역에 스타일 적용 */
+.mosic:hover .mosic_item {
+  display: block;
+  /* 블록을 사용해 눈에 보이도록 설정 */
+  background-color: #ffff00;
+  border-radius: 50px;
+}

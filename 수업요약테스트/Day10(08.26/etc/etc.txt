@@ -1,0 +1,6 @@
+@media only screen and (조건){css 스타일 문법}
+
+- 반응형 만들 때 주로 사용
+보통 조건에 max-width or min-width 둘중 하나로 창을 잡아주고
+스타일문법 안에 max라면 점점 작아지면서 변하게 min이라면 점점 커지면서 변하게
+and 로 조건을 계속 추가할 수 있음
