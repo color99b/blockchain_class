@@ -108,3 +108,7 @@ div {
   font-weight: 700;
   background-color: aqua;
 }
+
+.transition-duration {
+  transition-duration: 0.2;
+}

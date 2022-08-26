@@ -35,9 +35,9 @@
 
   /* 이름 하나당 하나의 사각형 */
   grid-template-areas:
-    "sidebar header header header1 header1"
-    "sidebar content content content content"
-    "sidebar footer footer footer footer";
+    "sidebar sidebar header header1 header1"
+    "sidebar sidebar content content content"
+    "sidebar sidebar footer footer footer";
 
   /* 세로 기준으로 위치를 결정 */
 
