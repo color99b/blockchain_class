@@ -1,0 +1,350 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>d&F</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- 혹시 모를 일을 대비한 제일 큰 디브 -->
+
+    <div style="padding: 0 60 0 60; min-width: 1300px; max-width: 1500px">
+      <!-- 구조분석 나눈 구역의 1번에 해당하는 부분 -->
+      <div id="hbox" class="header">
+        <div>메뉴바 아이콘, 메인메뉴</div>
+        <div>넥슨 아이콘</div>
+        <div>넥슨 회원가입, 넥슨 로그인</div>
+      </div>
+
+      <!-- 구조분석 나눈 구역의 2번에 해당하는 부분, 이 영역전체에 그림 배경이 깔려야함 -->
+      <div id="hbox" class="main">
+        <div>던파로고</div>
+        <div>업데이트 보기</div>
+        <div>해시태그</div>
+      </div>
+
+      <!-- 구조분석 나눈 구역의 3번에 해당하는 부분 과제의 메인디쉬랄까 -->
+      <div id="hbox" class="board">
+        <div id="vbox" class="board_left">
+          <!-- left_item 한 블록 -->
+          <div id="hbox">
+            <div class="board_left_item1"><a>던파소식</a></div>
+            <div id="vbox" class="board_left_item2">
+              <!-- left_item2 속성 하나의 링크마다 class를 지정해줘야하면 코드가 지저분해짐 ex) class="footb"
+                            ㅣ-> 스타일에서 item2의 a를 다 일괄로 주면 될듯
+                    -->
+
+              <!-- 평소 투명도 0.9주고 hover 투명도 1줘서 명암차이효과 -->
+              <div><a href="">공지사항</a></div>
+              <div><a href="">업데이트</a></div>
+              <div><a href="">이벤트</a></div>
+              <div><a href="">이달의 아이템</a></div>
+              <div><a href="">세리아의 상점</a></div>
+            </div>
+          </div>
+
+          <div id="hbox">
+            <div class="board_left_item1"><a>미디어</a></div>
+            <div id="vbox" class="board_left_item2">
+              <div><a href="">오늘의 던파</a></div>
+              <div><a href="">던파매거진</a></div>
+              <div><a href="">카툰&일러스트</a></div>
+              <div><a href="">멀티미디어</a></div>
+              <div><a href="">개발자노트</a></div>
+            </div>
+          </div>
+
+          <div id="hbox">
+            <div class="board_left_item1"><a>던파월드</a></div>
+            <div id="vbox" class="board_left_item2">
+              <div><a href="">던파게시판</a></div>
+              <div><a href="">거래게시판</a></div>
+              <div><a href="">던파캡쳐</a></div>
+              <div><a href="">던파쇼룸</a></div>
+              <div><a href="">던파UCC</a></div>
+              <div><a href="">길드</a></div>
+              <div><a href="">스티커 플레이마켓</a></div>
+            </div>
+          </div>
+
+          <div id="hbox">
+            <div class="board_left_item1"><a>가이드</a></div>
+            <div id="vbox" class="board_left_item2">
+              <div><a href="">초보자 가이드</a></div>
+              <div><a href="">기본 정보</a></div>
+              <div><a href="">캐릭터 정보</a></div>
+              <div><a href="">장비사전</a></div>
+              <div><a href="">던파 서고</a></div>
+            </div>
+          </div>
+
+          <div id="hbox">
+            <div class="board_left_item1"><a>랭킹</a></div>
+            <div id="vbox" class="board_left_item2">
+              <div><a href="">결투장 티어 랭킹</a></div>
+              <div><a href="">결투장 숙련도 랭킹</a></div>
+            </div>
+          </div>
+
+          <div id="hbox">
+            <div class="board_left_item1"><a>서비스센터</a></div>
+            <div id="vbox" class="board_left_item2">
+              <div><a href="">서비스센터 홈</a></div>
+              <div><a href="">FAQ</a></div>
+              <div><a href="">1:1 문의</a></div>
+              <div><a href="">선복구 서비스</a></div>
+              <div><a href="">원격지원 서비스</a></div>
+              <div><a href="">모바일앱 연동센터</a></div>
+              <div><a href="">청소년보호프로그램</a></div>
+              <div><a href="">약관 및 정책</a></div>
+            </div>
+          </div>
+          <div>
+            <table>
+              <tr>
+                <td style="border-right: 1px solid black">자료실</td>
+                <td>보안 서비스</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- board midde -->
+        <div id="vbox" class="board_middle">
+          <!-- middle분석 (1번) 
+              우측하단의 화살표 버튼들을 만들어줘야해서 메인칸 디브에 relative를 주고 버튼들은 bottom 0, right 0
+          -->
+          <div style="position: relative">
+            <img
+              src="미들배너.png"
+              style="max-width: 1090px; min-width: 760px"
+            />
+            <div id="hbox" class="banner_button">
+              <div style="width: 30%"><a href="">12/13</a></div>
+              <!-- 이미지 넣어서 하이퍼링크 발동시키기. -->
+              <div style="width: 17%"><a href=""> &lt;</a></div>
+              <div style="width: 16%"><a href=""> ▶</a></div>
+              <div style="width: 17%"><a href=""> &gt;</a></div>
+              <div style="width: 19%"><a href=""> ≡</a></div>
+            </div>
+          </div>
+
+          <div id="hbox">
+            <!-- 메인판 구역 한 개 -->
+            <div id="vbox" class="middle_item">
+              <div>
+                <h4 style="display: inline; float: left">던파소식</h4>
+
+                <div id="hbox" style="float: right; font-size: 12px">
+                  <div>공지</div>
+                  <div>업데이트</div>
+                  <div>이벤트</div>
+                </div>
+
+                <hr style="width: 100%" />
+
+                <li>8/26(금) 클라이언트 패치 안내</li>
+                <li>(15:16 추가) 8/25(목) 클라이언트 패치 안내</li>
+                <li>(12:40 추가) 8/25(목) 확인된 오류 안내</li>
+                <li>(12:40 추가) 8/25(목) 확인된 오류 안내</li>
+                <li>(12:40 추가) 8/25(목) 확인된 오류 안내</li>
+                <li>(12:40 추가) 8/25(목) 확인된 오류 안내</li>
+                <li>(12:40 추가) 8/25(목) 확인된 오류 안내</li>
+              </div>
+              <div><img src="news.png" style="width: 378px" /></div>
+            </div>
+
+            <div id="vbox" class="middle_item">
+              <div>
+                <h4>오늘의 던파</h4>
+
+                <hr style="width: 100%" />
+              </div>
+              <div id="hbox" style="position: relative">
+                <div class="today1"><img src="today_item1.png" /></div>
+                <div
+                  class="today2"
+                  style="position: absolute; top: 0; right: 0"
+                >
+                  <h5>다크나이트 가이드</h5>
+                  <p class="today_ex">
+                    개성있는 콤보 시스템을 가진<br />캐릭터입니다.<br />
+                  </p>
+                  <p class="today_people">던파게시판 암약무인님</p>
+                </div>
+              </div>
+              <div>
+                <h4>오늘의 던파</h4>
+
+                <hr style="width: 100%" />
+              </div>
+              <div id="hbox" style="position: relative">
+                <div class="today1"><img src="today_item2.png" /></div>
+                <div
+                  class="today2"
+                  style="position: absolute; top: 0; right: 0"
+                >
+                  <h5>상급 던전 이벤트 공명 장비 사용 팁</h5>
+                  <p class="today_ex">
+                    공명 장비는 낮은 레벨 장비에<br />사용하세요<br />
+                  </p>
+                  <p class="today_people">던파게시판 [힙합]타조님</p>
+                </div>
+              </div>
+              <div>
+                <h4>오늘의 던파</h4>
+
+                <hr style="width: 100%" />
+              </div>
+              <div id="hbox" style="position: relative">
+                <div class="today1"><img src="today_item3.png" /></div>
+                <div
+                  class="today2"
+                  style="position: absolute; top: 0; right: 0"
+                >
+                  <h5>NPC툰 35화</h5>
+                  <p class="today_ex">지금부터<br />QnA를 시작하지<br /></p>
+                  <p class="today_people">챌린지 곰곰단장</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="hbox">
+            <div class="middle_item">1</div>
+            <div class="middle_item">2</div>
+          </div>
+          <div id="hbox">
+            <div class="middle_item">1</div>
+            <div class="middle_item">2</div>
+          </div>
+
+          <!-- 그림과 글상자의 조합은 플렉스방스로 좌우 나누고 좌측엔 그림, 우측엔 글상자들 p로 한줄한줄 쓰고, div로 묶어서 margin-top, align 으로 가운데 정렬을 하였습니다. -->
+
+          <!-- grid 3*3 배치 -->
+          <div id="vbox">
+            <h4>미디어 & 던파UCC</h4>
+            <hr style="width: 100%" />
+            <div class="grid">
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+              <div id="vbox" style="text-align: center">
+                <div><img src="gird_item1.png" /></div>
+                <div style="padding-top: 7px">
+                  <p style="font-size: 14px">아라드인 미르씨 91화</p>
+                  <br />
+                  <p class="today_people">로앤그린</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- board right -->
+        <div id="vbox" class="board_right">asd</div>
+      </div>
+
+      <!-- 구조분석 나눈 구역의 4번에 해당하는 부분 -->
+      <div id="vbox" class="foot">
+        <div>
+          <!-- foota 태그는 글씨크기12px, 하이퍼링크 밑줄제거, hover 시 밑줄 생성 -->
+          <a class="foota" href="">회사소개</a>
+          <a class="foota" href="">이용약관</a>
+          <a class="foota" href="">게임등급안내</a>
+          <a class="foota" href="">개인정보처리방침</a
+          ><a class="foota" href="">운영정책</a
+          ><a class="foota" href="">넥슨던파PC방</a
+          ><a class="foota" href="">확률형 아이템 목록</a
+          ><a class="foota" href="">오픈 API </a>
+        </div>
+        <div>
+          <!-- footb 태그는 글자크기 10px -->
+          <p class="footb" href="">(주) 네오플 미래대표 김영준</p>
+          <p class="footb" href="">
+            제주특별자치도 제주시 1100로 3198-13(노혈동)
+          </p>
+
+          <p class="footb" href="">전화 1588-7701</p>
+          <p class="footb" href="">팩스 0502-258-8390</p>
+        </div>
+        <div>
+          <p class="footb" href="">E-mail: privacy@neople.ci.kr</p>
+          <p class="footb" href="">사업자등록번호 201-81-64417</p>
+          <p class="footb" href="">통신판매업 신고 제2017-제주노형-000064호</p>
+          <a class="footb" href="">사업자 정보 확인</a>
+        </div>
+        <div>
+          <!-- footb 태그는 글자크기 11px, 강조효과 -->
+
+          <p class="footc" href="">NeoPle Corporation All Rights Reserved.</p>
+        </div>
+        <div id="hbox">
+          <div>image(1)</div>
+          <div>image(2)</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

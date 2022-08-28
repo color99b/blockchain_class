@@ -5,37 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>머리아프다</title>
     <link rel="stylesheet" href="index.css" />
-  </head>
-  <body style="margin: 10 0 10 5; background-color: black">
-    <div class="body_pattern"><img src="pattern.png" /></div>
-    <div class="mainbox">
-      <div class="grid">
-        <div class="sidebar">
-          <p class="page">· · · · · · · 6 / 6</p>
-        </div>
-        <div class="header"><img src="1.png" /></div>
-        <div class="header1">
-          <p class="ex">
-            My name is Nick Jones. I help people translate ideas from words and
-            visuals into prototypes and websites using code. I love doing that.
-            Family is my priority so I work from home on things I can be proud
-            to share with them. I design, prototype and code interfaces from
-            Hillsborough, NC for clients mostly elsewhere. For larger projects,
-            I collaborate with a tight knit team of elite operatives.
-          </p>
-        </div>
 
-        <div class="footer">
-          <p class="seeking">Seeking<br />Projects<br />Selectively.</p>
-        </div>
-        <div class="footer1">
-          <button class="back">
-            <img
-              src="back.png"
-              style="width: 60px; height: 60px; margin-bottom: 20px"
-            />
-            <p class="white">Contact</p>
-          </button>
+    
+
+  </head>
+
+  <!-- 검은배경화면 및 내부 여백생성 -->
+  <body
+    style="
+      padding: 10 0 10 5;
+
+      background-color: black;
+    "
+  >
+   
+      <!-- 투명한 패턴사진 넣기 시도했으나 화면에 출력이 되지 않음. 
+          ㅣ-> 바디 안에 넣으면 왜때문인지 안나와서 바디 자체 속성으로 줘버리니까 나옴
+    -->
+      <div class="body_pattern">
+        <img src="pattern.png" />
+      </div>
+
+      <!-- 전체 콘텐츠가 들어갈 메인박스. 플렉스로 선언 -> 추후 업데이트 용이?!?  -->
+      <div class="mainbox">
+
+        <!-- 스크롤시 화면 회전 코드를 써봤지만 잘 작동하지않음.  -->
+        <script>
+
+          function scrollRotate() {
+              let image = document.getElementsByClassName("mainbox");
+            image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+          }
+      
+        window.addEventListener('scroll',scrollRotate);
+      
+      </script>
+
+
+        <!-- 불규칙적인 배치는 플렉스보다 그리드가 더 괜찮다고 생각해서 그리그 사용 -->
+        
+        <div class="grid">
+          <!-- 금요일에 배운 사이드바와 헤더 푸터로 구역을 나누고 화면상 위치에 배정
+            너무 어거지로 우겨넣은 듯 한 느낌이 있음 -> 전체 페이지 켜놓으면 그럴듯 하지만 교수님께 좀 혼날 거 같은 코드같다.
+        
+        -->
+          <div class="sidebar">
+            <p class="page">· · · · · · · 6 / 6</p>
+          </div>
+
+          <div class="header"><img src="1.png" /></div>
+          <div class="header1">
+            <p class="ex">
+              My name is Nick Jones. I help people translate ideas from words
+              and visuals into prototypes and websites using code. I love doing
+              that. Family is my priority so I work from home on things I can be
+              proud to share with them. I design, prototype and code interfaces
+              from Hillsborough, NC for clients mostly elsewhere. For larger
+              projects, I collaborate with a tight knit team of elite
+              operatives.
+            </p>
+          </div>
+
+          <div class="footer">
+            <p class="seeking">Seeking<br />Projects<br />Selectively.</p>
+          </div>
+          <div class="footer1">
+            <button class="back">
+              <img
+                src="back.png"
+                style="width: 60px; height: 60px; margin-bottom: 20px"
+              />
+
+              <p class="white">Contact</p>
+            </button>
+          </div>
         </div>
       </div>
     </div>
