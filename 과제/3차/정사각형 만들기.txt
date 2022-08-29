@@ -1,0 +1,10 @@
+main을
+position : relative; 주고
+
+:after
+에
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+
+

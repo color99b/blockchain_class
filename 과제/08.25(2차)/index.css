@@ -2,14 +2,48 @@
   box-sizing: border-box;
 }
 
+#hbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 가로선 */
+#vbox {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+div {
+  border: 1px solid black;
+}
+
 .mainbox {
-  width: 61.5%;
+  width: 61.5vw;
+
+  position: relative;
+  display: flex;
+  background-color: white;
+
+  justify-content: center;
+  display: block;
+}
+
+.mainbox_1 {
+  width: 61.5vw;
   height: 50%;
   display: flex;
   background-color: white;
   padding-bottom: 50%;
-  margin: 0;
+  margin-top: 30px;
   justify-content: center;
+  display: block;
+}
+
+.content {
+  justify-content: space-between;
+  margin-top: 100px;
 }
 
 /* .mainbox-item {
@@ -21,13 +55,13 @@
   background-color: black;
 } */
 
-.grid {
-  z-index: 90;
+.grid1 {
   display: grid;
-
+  position: absolute;
   grid-template-rows: repeat(3, 279px);
   grid-template-columns: repeat(10, minmax(100px, 300px));
-
+  width: 100%;
+  height: 100%;
   margin-top: 100px;
   margin-left: 5px;
   row-gap: 10px;
@@ -36,6 +70,12 @@
     "sidebar header . . . header1 header1 header1 header1 . ."
     "sidebar . . . . . . . . . ."
     "sidebar footer footer footer . . . . footer1 footer1 .";
+}
+
+.grid2 {
+  display: grid;
+  grid-template-rows: repeat(1, 18vh);
+  grid-template-columns: repeat(3, minmax(100px, 300px));
 }
 
 .grid_item {
@@ -72,7 +112,6 @@
 }
 
 .page {
-  position: absolute;
   left: -20;
   top: -20;
   transform: rotate(270deg);
@@ -80,11 +119,31 @@
   width: 150px;
   height: 100px;
   margin: 0;
+  font-size: 13px;
+}
+
+.into {
+  width: 6vw;
+  height: 18vh;
+  border-radius: 5px;
+}
+
+.into_hover {
+  width: 180px;
+  height: 18vh;
+  border-radius: 5px;
+}
+
+.into:hover {
+}
+
+.space_middle {
+  height: 45vh;
 }
 
 .seeking {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-top: 60px;
+  margin: 0;
   font-size: 50px;
   letter-spacing: 0px;
 }
@@ -143,4 +202,30 @@
 
   margin: auto;
   z-index: 100;
+}
+
+.section1 {
+  width: 30%;
+}
+
+.section2 {
+  width: 40%;
+  margin-right: 4vw;
+  letter-spacing: -1px;
+  line-height: 15px;
+}
+
+.section1_1 {
+  width: 15%;
+  height: 80vh;
+}
+
+.section1_2 {
+  width: 85%;
+  margin-left: 30px;
+  height: 80vh;
+}
+
+.test_001 {
+  transform: rotate(90deg) scale(0.5, 0.5);
 }
