@@ -3,7 +3,7 @@
 }
 
 div {
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 .main {
@@ -13,7 +13,6 @@ div {
   display: flex;
   overflow: hidden;
   max-width: 950px;
-  background-color: white;
 }
 
 .main:after {
@@ -48,16 +47,9 @@ div {
 
 .grid {
   display: grid;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  grid-template-rows: repeat(2, 50%);
-  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .grid:after {
@@ -67,57 +59,30 @@ div {
 }
 
 .grid_item {
+  display: absolute;
+
   width: 100%;
+  height: 50%;
 }
 
 .text {
   font-size: 1rem;
   font-family: "Courier New", Courier, monospace;
   margin-top: 100px;
-  /* min-width: 375px; */
-  max-width: 20vw;
-  overflow: hidden;
+  min-width: 375px;
 }
 
 .page {
-  font-size: 0.75vw;
+  font-size: 0.75rem;
   transform-origin: 0, 0;
   transform: rotate(90deg);
-  margin-top: 150px;
+  margin: 0;
   display: inline;
   width: fit-content;
   height: fit-content;
-  margin-left: -30px;
 }
 
 .bottomText {
   font-size: 3.2vw;
   font-weight: 700;
-  margin-left: 4vw;
-
-  margin-top: 6vw;
-  line-height: 3vw;
-}
-
-.flex {
-  display: flex;
-}
-
-.back {
-  width: 5vw;
-  min-width: 50px;
-  height: 8vw;
-  color: white;
-  background-color: black;
-  border-radius: 0.3vw;
-  font-size: 1vw;
-  margin-top: 7vw;
-  margin-left: 18vw;
-}
-
-.visit {
-  font-size: 1vw;
-  text-decoration: underline;
-  margin-left: 5vw;
-  margin-top: 7vw;
 }

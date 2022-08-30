@@ -1,11 +1,12 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- saved from url=(0079)http://127.0.0.1:5500/blockchain_class/%EA%B3%BC%EC%A0%9C/3%EC%B0%A8/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
+    
+  <link rel="stylesheet" href="./개발자도구 수정_files/index.css"></head>
   <body style="background-color: black">
     <div class="main">
       <div class="content">
@@ -13,10 +14,14 @@
           <div class="grid_item">
             <p class="page" style="float: left">9 / 9 - - - - - - -</p>
 
-            <img src="1.png" style="width: 20%; margin-top: 100px" />
+            <img src="./개발자도구 수정_files/1.png" style="width: 20%; margin-top: 100px">
           </div>
-          <div class="grid_item">
-            <p class="text">
+          <div class="grid_item" style="
+    overflow: hidden;
+">
+            <p class="text" style="
+    overflow: hidden;
+">
               My name is Nick Jones. I help people translate ideas from words
               and visuals into prototypes and websites using code. I love doing
               that. Family is my priority so I work from home on things I can be
@@ -29,7 +34,7 @@
 
           <div class="grid_item">
             <p class="bottomText">
-              Seeking <br />projects<br />
+              Seeking <br>projects<br>
               selectively.
             </p>
           </div>
@@ -39,14 +44,14 @@
         </div>
       </div>
     </div>
-    <br />
+    <br>
     <div class="main">
       <div class="content">
         <div class="grid">
           <div class="grid_item">
             <p class="page" style="float: left">8 / 9 - - - - - - -</p>
 
-            <img src="2.png" style="width: 20%; margin-top: 100px" />
+            <img src="./개발자도구 수정_files/2.png" style="width: 20%; margin-top: 100px">
           </div>
           <div class="grid_item">
             <p class="text">
@@ -75,6 +80,44 @@
         </div>
       </div>
     </div>
-    <br />
-  </body>
-</html>
+    <br>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

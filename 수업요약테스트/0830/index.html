@@ -1,0 +1,120 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //여기는 슬래시2개 주석도 가능.
+      //프로그래밍적으로 보는건 자바스크립트
+      //구조적으로 보는건 html
+
+      //   var는 변수 선언할 때 사용하는 명령어
+      //  var는 편하게 계속 마음대로 쓸 수 있다.
+      var var1 = 1; //var는 문제가 많아 요즘은 같이 쓰지 않는다.
+
+      var1 = 2; //여러 사람들이 같이 작업을 할 때 같은 변수를 사용하면서 다른 의미로 사용하게 될 수가 있다.
+      var var1 = "var1"; //ex : 재훈이형이 a라는 변수를 선언하고 1을 정의한 후에 출석 날짜로 사용. -> 이걸 다른 사람이 a라는 변수에 결석 날짜로 사용을 하는경우
+
+      let let1 = 1;
+
+      const const1 = 1;
+      //let 은 선언후 재정의 가능 , const는 선언 후 재정의 불가능
+
+      let let2; // let2를 선언했다. 상자에 이름을 붙인다.
+      let2 = 2; // let2를 정의했다. 상자에 물건을 담는다.
+
+      let let3 = 3; //let3을 초기화 했다. 상자에 이름을 붙이면서 물건을 담는다.
+
+      console.log("asdf");
+      console.log(let1);
+      console.log(const1);
+      console.log(let2);
+      console.log(let3);
+
+      //자료형
+
+      //string
+      let string1 = '"abcd"';
+      let string2 = "abcd";
+      let string3 = `abc
+      ㅁㄴasdasdasdd`; // 물결표 점임. 맥에서는 키가 영어일 때 사용.
+
+      //number
+      let number1 = 1;
+      let number2 = 1.1;
+      let number3 = 1 / 3;
+      let number4 = "1"; // 이 친구는 텍스트다. number에 텍스트가 들어가는거라 연산때 상황이 달라짐
+
+      //boolean
+      let boolean1 = true;
+      let boolean2 = false;
+      let boolean3 = 1; //참 0이 아니면 참, 0이면 거짓 으로 따짐
+      let boolean4 = "asdf"; //참. 비어있으면 거짓
+      let boolean5 = 0;
+      let boolean6 = "0";
+      let boolean7 = ""; // 텍스트지만 비어있기에 거짓으로 나옴
+
+      //undefined와 null의 차이
+      let undefined1 = undefined; //초기값, 내가 설정하지 않은 빈 값.
+      let null1 = null; // 내가 설정한 빈 값.
+
+      // object : 키와 값으로 이루어진 객체, 중괄호로 정의함.
+      let obj = {};
+      obj = { a: 1, b: 2, c: "3" }; //a, b, c 를 키라고 하고, 1,2, "3" 을 값이라고 한다.
+      console.log(obj.a);
+      console.log(obj.b);
+      console.log(obj.c);
+
+      //array : 이것 저것 다 넣을 수 있는 배열 (javascript에서만 다른언어는 자료형 통일되야함)
+      let arr1 = [1, 2, "3", { a: 1, b: 2, c: "3" }, true, [obj.a], obj];
+
+      console.log(arr1); //0은 배열의 첫 번째 값
+      console.log(arr1[0]); // arr1[몇 번째 있는지] 넣으면 그 안 값을 가져온다.
+      console.log(arr1[1]);
+      console.log(arr1[2]);
+
+      arr1.push(123); //푸쉬는 배열끝에 추가한다.
+      arr1.push("abc");
+
+      console.log(arr1);
+      let pop1 = arr1.pop(); //pop은 배열끝을 뺀다.
+      console.log(arr1);
+      console.log(pop1);
+
+      arr1.unshift("unshift"); // 배열의 앞에 추가
+      console.log(arr1);
+
+      let shift1 = arr1.shift(); //배열의 앞에서 뺀다.
+      console.log(arr1);
+      console.log(shift1);
+
+      console.log(typeof shift1); // 변수타입의 자료형을 알려준다.
+      console.log(typeof string1);
+      console.log(typeof number1);
+      console.log(typeof boolean1);
+      console.log(typeof undefined1);
+      console.log(typeof null1); //object로 나옴
+      console.log(typeof obj);
+      console.log(typeof obj.a);
+      console.log(typeof obj.b);
+      console.log(typeof obj.c);
+      console.log(typeof arr1);
+      console.log(typeof arr1[0]);
+      console.log(typeof arr1[2]);
+      console.log(typeof arr1[3]);
+
+      let obj1 = {
+        //자바스크립트에서 문자열엔 스페이스바가 들어감 근데 이걸 호출할 때 문제가 생김.
+        "test code": 1,
+        //obj1["test code"]로 접근가능 (속성 접근자)
+        test_code: 2,
+      };
+
+      console.log(obj1["test code"]);
+      obj1.test_code;
+    </script>
+  </body>
+</html>
