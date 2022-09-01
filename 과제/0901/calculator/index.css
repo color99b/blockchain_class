@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  padding: 10px;
+}
+button {
+  width: 100px;
+  height: 100px;
+}
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.hbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.fbox {
+  color: aqua;
+}
+.sbox {
+  color: aqua;
+}

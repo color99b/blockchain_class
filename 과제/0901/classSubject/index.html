@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hw</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div
+      class="vbox"
+      style="background-color: black; width: fit-content; color: white"
+    >
+      <div><h3 style="text-align: center">두 값 계산기</h3></div>
+      <div>현재의 값</div>
+      <div class="hbox" style="display: flex">
+        <div><span class="fbox">1번 상자 값:</span></div>
+        <div><span class="sbox">2번 상자 값:</span></div>
+      </div>
+
+      <div>
+        <button onClick="fNumPlus()">+</button>
+        <!-- 위 버튼을 누르면 firstNum 1씩 증가 -->
+        <button onClick="sNumPlus()">+</button>
+        <!-- 위 버튼을 누르면 secondNum 1씩 증가 -->
+        <button onClick="resultPlus()">result(+)</button>
+        <!-- 위 버튼을 누르면 합친 결과가 콘솔창에 출력 증가 -->
+        <button onClick="reset()">reset</button>
+      </div>
+      <div>
+        <button onClick="fNumMius()">-</button>
+        <button onClick="sNumMius()">-</button>
+        <button onClick="resultMius()">result(-)</button>
+      </div>
+    </div>
+  </body>
+</html>
