@@ -223,13 +223,13 @@ function namerge() {
   if (firstNum >= secondNum) {
     result = firstNum % secondNum;
 
-    alert(`두 값을 나눈 값은 ${firstNum % secondNum}입니다.`);
-    console.log(`두 값을 나눈 값은 ${firstNum % secondNum}입니다.`);
+    alert(`두 값의 나머지 값은 ${firstNum % secondNum}입니다.`);
+    console.log(`두 값의 나머지 값은 ${firstNum % secondNum}입니다.`);
   } else {
     result = secondNum % firstNum;
 
-    alert(`두 값을 나눈 값은 ${secondNum % firstNum}입니다.`);
-    console.log(`두 값을 나눈 값은 ${secondNum % firstNum}입니다.`);
+    alert(`두 값의 나머지 값은 ${secondNum % firstNum}입니다.`);
+    console.log(`두 값의 나머지 값은 ${secondNum % firstNum}입니다.`);
   }
 
   return result;

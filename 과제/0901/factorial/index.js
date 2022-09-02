@@ -43,10 +43,26 @@ let n = parseInt(n1);
 // fac(n)* fac(n-1) * fac(n-2) * 1
 
 function fac() {
-  for (let n2 = n; n2 > 0; n2--) {
+  let n2 = n;
+
+  for (; n2 > 0; n2--) {
     result *= n2;
   }
   return alert(result);
 }
 
 fac(n);
+
+let a = prompt("dada");
+
+function fator(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    if (n == 1) return 1;
+    else {
+      result = i * fator(n - 1);
+    }
+  }
+}
+
+fator(a);
