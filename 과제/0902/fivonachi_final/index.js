@@ -61,13 +61,14 @@
 // //  i= 5
 // // 1 1 2 3 5
 
-let num1 = prompt("asd");
+let num1 = prompt("몇 번째 항인지 입력하시오");
 let num = parseInt(num1);
 
 function fibo(num) {
-  if (num <= 1) return 1;
+  if (num == 1 || num == 0) return num;
 
-  return console.log(fibo(num - 1) + fibo(num - 2));
+  return parseInt(fibo(num - 1)) + parseInt(fibo(num - 2));
 }
 
-fibo(num);
+console.log(fibo(num));
+// 리턴에는 계산식으로 하고 아래에 콘솔로그를 적으면 계산은 잘됨.
