@@ -40,18 +40,18 @@ let count = 0;
 // }
 
 // avoid(num);
-
 function select() {
   for (let i = 0; i < 3; i++) numArr[i] = Math.floor(Math.random() * 10);
 
-  while (numArr[0] < 1) numArr[0] = Math.floor(Math.random() * 10);
+  // while (numArr[0] < 1) numArr[0] = Math.floor(Math.random() * 10);
 
-  while (numArr[1] == numArr[0]) numArr[1] = Math.floor(Math.random() * 10);
+  // while (numArr[i+1] == numArr[i]) numArr[1] = Math.floor(Math.random() * 10);
 
-  while (numArr[2] == numArr[1] || numArr[2] == numArr[0])
-    numArr[2] = Math.floor(Math.random() * 10);
+  // while (numArr[2] == numArr[1] || numArr[2] == numArr[0])
+  //   numArr[2] = Math.floor(Math.random() * 10);
 
-  // console.log(numArr); 정답지
+  console.log(numArr);
+  //정답지;
 }
 
 select();

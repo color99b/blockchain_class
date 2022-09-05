@@ -20,6 +20,7 @@ function dp(n, start, end, mid) {
 
 hanoi();
 console.log(`총 이동횟수는 ${count}입니다.`);
+
 // 1번을 2번으로 이동
 // 1번을 3번으로 이동
 // 2번을 3번으로 이동
