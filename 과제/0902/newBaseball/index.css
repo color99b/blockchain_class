@@ -1,0 +1,92 @@
+.btn {
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: azure;
+  padding: 5px 10px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  height: 20px;
+  margin-top: 60px;
+}
+
+div img {
+  width: 100px;
+  height: 100px;
+  margin-right: 500px;
+}
+
+.btn:first-child {
+  background-color: bisque;
+}
+
+.btn:hover {
+  background-color: beige;
+  transform: rotate(25deg);
+  cursor: pointer;
+}
+
+.title {
+  padding: 20px;
+  font-size: 2rem;
+}
+
+.result {
+  border-collapse: collapse;
+}
+
+.result td,
+.result th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.result tr:nth-child(1) {
+  background-color: lightblue;
+}
+.result tr:nth-child(2) {
+  background-color: lightcoral;
+}
+.result tr:nth-child(3) {
+  background-color: lightcyan;
+}
+.result tr:nth-child(4) {
+  background-color: lightgreen;
+}
+.result tr:nth-child(5) {
+  background-color: lightgray;
+}
+
+#balls {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+btn:focus {
+  background-color: black;
+}
+
+#balls::before {
+  position: absolute;
+  animation: move 2s 1 ease;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(5);
+  }
+
+  100% {
+    transform: scale(10);
+  }
+}

@@ -1,0 +1,42 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>baseBall</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div class="btn" onclick="reset()">게임 시작</div>
+      <div class="btn" onclick="selectNum()">숫자 선택</div>
+
+      <div><img src="투수.jpeg" /><img id="balls" src="공.png" /></div>
+
+      <div><img src="포수.png" /></div>
+    </div>
+    <div class="title" style="flex-direction: row">숫자 야구게임</div>
+    <table class="result">
+      <tbody>
+        <tr id="player-sel">
+          <th>Player Select</th>
+        </tr>
+        <tr id="count">
+          <th>Count</th>
+        </tr>
+        <tr id="strike">
+          <th>Strike</th>
+        </tr>
+        <tr id="ball">
+          <th>Ball</th>
+        </tr>
+        <tr id="out">
+          <th>Out</th>
+        </tr>
+      </tbody>
+    </table>
+    <!-- class는 스타일을 설정하기위해서 사용. (css스타일) -->
+    <!-- id는 javascript에서 -->
+  </body>
+</html>
