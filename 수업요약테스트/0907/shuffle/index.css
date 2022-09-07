@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.create {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.card {
+  background-image: url(1.jpg);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  display: in-line;
+  width: 100px;
+  height: 200px;
+  border: 1px solid black;
+  float: left;
+}

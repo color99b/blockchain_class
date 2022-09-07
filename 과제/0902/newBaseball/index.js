@@ -95,3 +95,11 @@ function balls() {
   balls.style.display = "block";
   balls.addEventListener("animationstart");
 }
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+for (; numArr.length < 3; ) {
+  const tempNum = parseInt(Math.random() * 10);
+  console.log(tempNum);
+  if (!numArr.includes(tempNum)) numArr.push(tempNum);
+}

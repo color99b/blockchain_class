@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+.mainbox {
+  display: flex;
+}
+
+#vbox {
+  display: flex;
+
+  flex-direction: row;
+}
+
+#hbox {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  width: 125px;
+  border: 1px solid black;
+  height: 175px;
+  margin: 10 10 10 10px;
+  background-color: azure;
+  cursor: pointer;
+  font-size: 0px;
+}
+
+.card:hover {
+  background-color: beige;
+  transform: rotate(10deg);
+}
