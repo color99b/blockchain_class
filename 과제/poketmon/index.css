@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+div img {
+  justify-content: center;
+  align-items: center;
+}
+
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+
+div {
+  border: 1px solid black;
+}
+
+.enermy {
+  display: flex;
+  width: 100%;
+  height: 250px;
+}
+
+.myMon {
+  width: 100%;
+  height: 250px;
+  display: flex;
+}
+
+.dialog {
+  width: 100%;
+  height: 250px;
+}
+
+.nameBar1 {
+  width: 60%;
+
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nameBar2 {
+  width: 60%;
+  height: 250px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.enermy_img {
+  height: 250px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myMon_img {
+  height: 250px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div img {
+  width: 200px;
+}
+
+.dialog2 {
+  display: flex;
+  height: 250px;
+}
+
+.tech4 {
+  position: absolute;
+  height: 350px;
+  top: 410;
+  width: 430px;
+}
+
+.tech {
+  position: absolute;
+  left: 440;
+  height: 250px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 365px;
+}

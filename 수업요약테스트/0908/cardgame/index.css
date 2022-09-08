@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100px;
+  height: 150px;
+  margin: 5px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  /* justify-content 센터주고 align items 가운데 주면 도형안에 글자 가운데에 나옴 */
+  align-items: center;
+}
+
+.flex-item:hover {
+  background-color: beige;
+  cursor: pointer;
+}
