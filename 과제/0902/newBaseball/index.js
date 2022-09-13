@@ -103,3 +103,21 @@ for (; numArr.length < 3; ) {
   console.log(tempNum);
   if (!numArr.includes(tempNum)) numArr.push(tempNum);
 }
+
+
+
+
+
+
+
+
+let number1 = 5;
+const number2 = 5;
+
+
+let number3;
+
+number3 = 3;
+
+
+
