@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-bottom: 1px solid black;
+}
+
+td,
+th {
+  padding: 5px 0;
+  text-align: center;
+  border-right: 1px dashed black;
+  min-width: 100px;
+}
+
+th {
+  background-color: gray;
+  color: white;
+}
+
+thead th {
+  background-color: azure;
+  font-weight: 900;
+  border-right: 1px dashed white;
+}
+
+thead th:last-child {
+  border-right: none;
+}
+
+tr {
+  border-top: 1px solid black;
+}
+
+thead th {
+  background-color: black;
+  color: white;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: lightgray;
+}

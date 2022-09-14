@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.on {
+  color: aqua;
+}
+
+.hover {
+  background-color: black;
+}

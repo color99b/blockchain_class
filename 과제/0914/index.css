@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+#mainbox {
+  width: 80%;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  background-color: black;
+  font-weight: 1000;
+  color: wheat;
+}
+
+.view {
+}
+
+.list {
+}
+
+#bodyBox {
+  display: flex;
+}
+#mainbox:after {
+  content: "";
+  display: block;
+  padding-bottom: 50%;
+}
+
+.clickBtn {
+  float: right;
+}
+
+.addList {
+  /* display: none; */
+  position: absolute;
+  right: 0;
+}
+
+#btn {
+  width: 200px;
+}
+
+#text_input {
+}
+#date_input {
+}
+
+#time_input {
+}
+
+#table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.control {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 10;
+  left: 35%;
+}
+
+#insertItem {
+  width: 100px;
+  margin: 10 10 10 10;
+}
+
+#deleteItem {
+  width: 100px;
+  margin: 10 10 10 10;
+}
