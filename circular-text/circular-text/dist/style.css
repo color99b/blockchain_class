@@ -1,0 +1,33 @@
+/*--------------------
+Body
+--------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: #e4e4dd;
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+svg {
+  height: 100vh;
+}
+svg text {
+  font-size: 33px;
+  font-family: Helvetica Neue, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 21px;
+  fill: #333;
+}

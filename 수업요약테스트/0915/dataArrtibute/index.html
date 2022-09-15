@@ -1,0 +1,25 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ddddddddd</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="data-set" data-count="0">count</div>
+    <!-- // 속성으로 "data-***" 을 설정하면 javascript 에서 dataset 이라는 프로퍼티 객체에 ***이라는 프로퍼티로
+      //저장된다. ?? 프로퍼티란 -->
+    <script>
+      console.log(document.getElementById("data-set").dataset.count);
+
+      document.getElementById("data-set").onclick = (e) => {
+        e.target.dataset.count = parseInt(e.target.dataset.count) + 1;
+        //data-set은 수정도 가능하다.
+        //target 이 붙는 이유? 정확한 target의 뜻? 이벤트가 발생한 대상 객체를 가리킨다. e는 클릭했단 정보 매개변수?
+        console.log(document.getElementById("data-set").dataset.count);
+      };
+    </script>
+  </body>
+</html>
