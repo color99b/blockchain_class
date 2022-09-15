@@ -11,10 +11,10 @@ root.onwheel = (e) => {
   //마우스 휠에 대한 메서드
 };
 
-document.getElementById("name").onchange = (e) => {
-  console.log(e.target.value);
-  //e,target은 해당 메서드가 어디서 싱햇되었는지 ( 포커스가 기준이 될수도 있고 마우스의 위치가 기준이 될 수도 있다.)
-}; //변경이 완료 되었을 때
+// document.getElementById("name").onchange = (e) => {
+//   console.log(e.target.value);
+//   //e,target은 해당 메서드가 어디서 싱햇되었는지 ( 포커스가 기준이 될수도 있고 마우스의 위치가 기준이 될 수도 있다.)
+// }; //변경이 완료 되었을 때
 
 document.getElementById("name").oninput = (e) => {
   console.log(e.target.value);
