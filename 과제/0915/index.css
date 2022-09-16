@@ -70,26 +70,11 @@ div {
   border-radius: 100%;
   width: 30rem;
   height: 30rem;
+  background-color: red;
 }
 
 #circle img {
   width: 30rem;
-}
-
-#circle2 {
-  position: absolute;
-  border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  width: 20rem;
-  height: 20rem;
-  transform: translate(-50%, -50%);
-  text-align: left;
-  border: 1px solid white;
-}
-#circle2 img {
-  margin-left: -18px;
-  width: 22rem;
 }
 
 .tr1 {
@@ -138,12 +123,91 @@ div {
   vertical-align: middle;
 }
 
-.losebegim {
+#lose {
   margin-top: 100px;
   width: 10rem;
 }
 
-.wins {
+#begim {
+  margin-top: 100px;
+  width: 10rem;
+}
+#begim span {
+  float: right;
+}
+
+#wins {
   margin-top: 30px;
   width: 10rem;
+}
+
+#wins2 {
+  margin-top: 30px;
+  width: 10rem;
+}
+
+.targetD {
+  position: absolute;
+  z-index: 10;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 1px;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 40px solid red;
+  border-bottom: 0px solid transparent;
+  background-color: transparent;
+}
+
+@keyframes rullet {
+  0% {
+    transform: rotate(0deg);
+    transition-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle_item {
+  position: absolute;
+  top: 40;
+  left: 210;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 25rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+#circle2 {
+  position: absolute;
+  z-index: 20;
+  border-radius: 100%;
+  background-color: wheat;
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  height: 20rem;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  border: 1px solid white;
+}
+#circle2 img {
+  margin-left: -18px;
+  width: 22rem;
+}
+
+.circle_line {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 50%;
+  width: 0.2rem;
 }
