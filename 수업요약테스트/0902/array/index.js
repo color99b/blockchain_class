@@ -25,15 +25,15 @@
 // //없으면 -1, 첫번째에 있으면 0 그 다음은 쫘르륵
 // console.log(tempReturn);
 
-// //find의 반환값은 아이템의 순서가 아닌. 아이템 그 자체이다.
-// //매개변수에 해당하는 함수의 매개변수(item) 은 배열의 각 아이템을 적용한다.
-// //find 함수는 배열의 각 아이템을 순서대로 매개변수함수에 전달하여 리턴값을 확인한다.
-// //매개변수 함수에게서 받은 리턴 값이 true 면, 해당 아이템을 리턴하고 find 함수를 종료한다.
-// tempReturn = arr.find((item) => {
-//   console.log("item" + item);
-//   return item == 100; //find 함수의 리턴값은 true 값을 리턴 , return 값이 트루가 아니면 undefined
-// });
-// //find : 검색할 때 사용할 코드
+//find의 반환값은 아이템의 순서가 아닌. 아이템 그 자체이다.
+//매개변수에 해당하는 함수의 매개변수(item) 은 배열의 각 아이템을 적용한다.
+//find 함수는 배열의 각 아이템을 순서대로 매개변수함수에 전달하여 리턴값을 확인한다.
+//매개변수 함수에게서 받은 리턴 값이 true 면, 해당 아이템을 리턴하고 find 함수를 종료한다.
+tempReturn = arr.find((item) => {
+  console.log("item" + item);
+  return item == 100; //find 함수의 리턴값은 true 값을 리턴 , return 값이 트루가 아니면 undefined
+});
+//find : 검색할 때 사용할 코드
 
 // console.log(tempReturn);
 

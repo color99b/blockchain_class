@@ -3,7 +3,6 @@
 }
 
 div {
-  border: 1px solid wheat;
   background-color: black;
   color: wheat;
 }
@@ -18,6 +17,18 @@ div {
 #coinBar {
   height: 7rem;
   display: flex;
+}
+.addCoin {
+  position: absolute;
+  left: 33.5rem;
+  bottom: 8.5rem;
+  width: 5rem;
+  animation: plusCoin 2s 1;
+}
+
+#powerBtn {
+  margin-top: 1.5rem;
+  height: 3rem;
 }
 
 #gameBar {
@@ -58,6 +69,7 @@ div {
 }
 
 .playerSelect {
+  border: 1px solid beige;
   width: 9rem;
   margin-top: 30px;
 }
@@ -70,11 +82,159 @@ div {
   border-radius: 100%;
   width: 30rem;
   height: 30rem;
-  background-color: red;
+  background-color: white;
 }
 
 #circle img {
   width: 30rem;
+}
+/* 
+#rullet_item {
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 10%;
+  font-size: 1.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: beige;
+  color: black;
+}
+
+#rullet_item:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+#rullet_item:nth-child(2) {
+  transform: rotate(24deg);
+}
+#rullet_item:nth-child(3) {
+  transform: rotate(48deg);
+}
+
+#rullet_item:nth-child(4) {
+  transform: rotate(72deg);
+}
+
+#rullet_item:nth-child(5) {
+  transform: rotate(96deg);
+}
+
+#rullet_item:nth-child(6) {
+  transform: rotate(120deg);
+}
+
+#rullet_item:nth-child(7) {
+  transform: rotate(144deg);
+}
+
+#rullet_item:nth-child(8) {
+  transform: rotate(168deg);
+}
+
+#rullet_item:nth-child(9) {
+  transform: rotate(192deg);
+}
+
+#rullet_item:nth-child(10) {
+  transform: rotate(216deg);
+}
+
+#rullet_item:nth-child(11) {
+  transform: rotate(240deg);
+}
+#rullet_item:nth-child(12) {
+  transform: rotate(264deg);
+}
+#rullet_item:nth-child(13) {
+  transform: rotate(288deg);
+}
+#rullet_item:nth-child(14) {
+  transform: rotate(312deg);
+}
+#rullet_item:nth-child(15) {
+  transform: rotate(336deg);
+} */
+
+#line_item {
+  z-index: 20;
+  position: absolute;
+  top: 10;
+  left: 42.5%;
+  right: 0;
+  bottom: 50%;
+  padding-top: 3%;
+  justify-content: center;
+  background-color: black;
+  font-size: 1.8rem;
+  width: 4.5rem;
+  text-align: center;
+  color: black;
+  transform-origin: bottom;
+  color: white;
+}
+
+#line_item:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+#line_item:nth-child(2) {
+  transform: rotate(24deg);
+}
+#line_item:nth-child(3) {
+  transform: rotate(48deg);
+}
+
+#line_item:nth-child(4) {
+  transform: rotate(72deg);
+}
+
+#line_item:nth-child(5) {
+  transform: rotate(96deg);
+}
+
+#line_item:nth-child(6) {
+  transform: rotate(120deg);
+}
+
+#line_item:nth-child(7) {
+  transform: rotate(144deg);
+}
+
+#line_item:nth-child(8) {
+  transform: rotate(168deg);
+}
+
+#line_item:nth-child(9) {
+  transform: rotate(192deg);
+}
+
+#line_item:nth-child(10) {
+  transform: rotate(216deg);
+}
+
+#line_item:nth-child(11) {
+  transform: rotate(240deg);
+}
+#line_item:nth-child(12) {
+  transform: rotate(264deg);
+}
+#line_item:nth-child(13) {
+  transform: rotate(288deg);
+}
+#line_item:nth-child(14) {
+  transform: rotate(312deg);
+}
+#line_item:nth-child(15) {
+  transform: rotate(334deg);
+}
+
+.rullet {
+  background-color: gray !important;
 }
 
 .tr1 {
@@ -83,9 +243,9 @@ div {
 
   border-bottom: 80px solid transparent;
   border-top: 80px solid transparent;
-  border-left: 200px solid skyblue;
+  border-left: 200px solid gray;
   border-right: 80px solid transparent;
-  background-color: wheat;
+  background-color: black;
 }
 
 .tr2 {
@@ -95,8 +255,8 @@ div {
   border-bottom: 80px solid transparent;
   border-top: 80px solid transparent;
   border-left: 100px solid transparent;
-  border-right: 200px solid skyblue;
-  background-color: wheat;
+  border-right: 200px solid gray;
+  background-color: black;
 }
 
 #trZone {
@@ -128,6 +288,32 @@ div {
   width: 10rem;
 }
 
+.losing {
+  position: absolute;
+  left: 2rem;
+  bottom: 0.7rem;
+  width: 9rem;
+  height: 9rem;
+  background-color: aqua;
+  border-radius: 50%;
+}
+
+.losing > span {
+  display: none;
+}
+#lose > span {
+  font-size: 1.6rem;
+}
+#begim > span {
+  font-size: 1.6rem;
+}
+#wins > span {
+  font-size: 1.6rem;
+}
+#wins2 > span {
+  font-size: 1.6rem;
+}
+
 #begim {
   margin-top: 100px;
   width: 10rem;
@@ -135,10 +321,47 @@ div {
 #begim span {
   float: right;
 }
+.begimming {
+  position: absolute;
+  left: 27.4rem;
+  bottom: 0.9rem;
+  width: 9rem;
+  height: 9rem;
+  background-color: chartreuse;
+  border-radius: 50%;
+}
+
+.begimming > span {
+  display: none;
+}
 
 #wins {
   margin-top: 30px;
   width: 10rem;
+}
+
+.winning {
+  background-color: blueviolet;
+
+  left: 2rem;
+  bottom: 70rem;
+  width: 200rem;
+  height: 5rem;
+}
+#wins > span {
+  color: white;
+}
+#wins2 > span {
+  color: white;
+}
+#lose > span {
+  color: white;
+}
+#begim > span {
+  color: white;
+}
+.winning > span {
+  display: none;
 }
 
 #wins2 {
@@ -161,14 +384,27 @@ div {
   background-color: transparent;
 }
 
-@keyframes rullet {
+@keyframes plusCoin {
   0% {
-    transform: rotate(0deg);
+    transform: translate(5rem, 5rem);
     transition-timing-function: ease-in-out;
   }
 
+  50% {
+  }
   100% {
-    transform: rotate(360deg);
+  }
+}
+
+@keyframes jackpot {
+  0% {
+    transform: translate(0, 20rem);
+    transition-timing-function: ease-in-out;
+  }
+
+  50% {
+  }
+  100% {
   }
 }
 
@@ -190,14 +426,13 @@ div {
   position: absolute;
   z-index: 20;
   border-radius: 100%;
-  background-color: wheat;
+  background-color: gray;
   top: 50%;
   left: 50%;
   width: 20rem;
   height: 20rem;
   transform: translate(-50%, -50%);
   text-align: left;
-  border: 1px solid white;
 }
 #circle2 img {
   margin-left: -18px;
@@ -210,4 +445,33 @@ div {
   bottom: 50%;
   left: 50%;
   width: 0.2rem;
+}
+
+.jackpot {
+  position: absolute;
+  bottom: 2rem;
+  animation: jackpot 0.5s 3;
+}
+
+.jackpot2 {
+  position: absolute;
+  bottom: 1.8rem;
+
+  animation: jackpot 0.45s 4;
+}
+
+.bbung {
+  position: absolute;
+  bottom: 1.8rem;
+  animation: bbung 2s 1;
+}
+
+@keyframes bbung {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
