@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+#mainBox {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+div {
+  border: 1px solid black;
+  margin: 0 0 0 0;
+}
+
+#mainBar {
+  position: relative;
+  background-image: url("/과제/0919/image/1.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  /* 위 코드 뭥미 */
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 119.9rem;
+
+  height: 70vh;
+}
+
+#selectPage {
+  display: flex;
+}
+
+#menuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15 10 10 10;
+}
+
+#selectPage {
+  margin-right: 10rem;
+  width: 13rem;
+  justify-content: space-between;
+}
+
+#redLogo {
+  position: absolute;
+  top: 1rem;
+  width: 10rem;
+}
