@@ -3,6 +3,7 @@
 }
 
 #mainBox {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -23,7 +24,7 @@ div {
   background-size: cover;
   background-repeat: no-repeat;
 
-  width: 119.9rem;
+  width: 100vw;
 
   height: 70vh;
 }
@@ -33,10 +34,17 @@ div {
 }
 
 #menuBar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 15 10 10 10;
+  background-color: lightgray;
+  height: 6vh;
+  align-items: center;
 }
 
 #selectPage {
@@ -46,7 +54,98 @@ div {
 }
 
 #redLogo {
-  position: absolute;
-  top: 1rem;
-  width: 10rem;
+  position: relative;
+  top: 5vh;
+  left: 16vw;
+  width: 13rem;
+}
+
+#title {
+  color: rgb(205, 70, 47);
+  font-weight: 700;
+  font-size: 6rem;
+}
+
+#textBar {
+  position: relative;
+  top: 21vh;
+  left: 50.5vw;
+  width: fit-content;
+
+  text-align: right;
+}
+
+#textBar > span {
+  display: block;
+  font-family: "Roboto Slab";
+  line-height: 9vh;
+  letter-spacing: -0.1rem;
+}
+
+#sub {
+  color: white;
+  font-weight: 600;
+  font-size: 4.5rem;
+}
+
+.mainExplain {
+  color: white;
+  font-size: 0.85rem;
+  font-style: italic;
+  font-family: "Open sans";
+}
+
+.subExplain {
+  color: black;
+  font-size: 0.85rem;
+  font-style: italic;
+  font-family: "Open sans";
+}
+
+#infoBar {
+  display: flex;
+}
+
+#btn {
+  color: white;
+  background-color: rgb(205, 70, 47);
+  border-radius: 2rem;
+  width: 9.5rem;
+  height: 2.5rem;
+  font-weight: bold;
+}
+
+span {
+  display: block;
+}
+
+.subTitle {
+  color: black;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: -0.15rem;
+}
+
+.subTitle2 {
+  margin-top: 0.5rem;
+  color: black;
+  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+}
+
+pre {
+  margin-top: 0.5rem;
+}
+
+.info1 {
+  margin-left: 17vw;
+  margin-top: 16vh;
+  width: fit-content;
+}
+
+.info2Img {
+  position: relative;
+  bottom: 10vh;
 }
