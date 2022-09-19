@@ -23,6 +23,7 @@
 /* 화면일 때(오브젝트가 들어가는 body 몸통)만 너비가 1000픽셀 까지에서 적용한다. */
 @media only screen and (max-width: 1000px) {
   .etc {
+    /* .etc를 이걸로 덮어쓰는거(이 속성들만) */
     width: 700px;
     opacity: 1;
   }
