@@ -93,7 +93,6 @@ document.getElementById("insertCoin").onclick = () => {
 
 //플레이어의 선택
 let playerSelect = function (playerSel) {
-  comSelect = "rock";
   setTimeout(() => {
     if (comSelect == playerSel) {
       console.log("비겼다 + 비겼다에 불켜기 함수로 넘어가기");
