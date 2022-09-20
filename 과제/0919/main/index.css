@@ -26,7 +26,7 @@ div {
 
   width: 100vw;
 
-  height: 70vh;
+  height: 90vh;
 }
 
 #selectPage {
@@ -55,9 +55,9 @@ div {
 
 #redLogo {
   position: relative;
-  top: 5vh;
-  left: 16vw;
-  width: 13rem;
+  top: 10vh;
+  left: 17vw;
+  width: 14rem;
 }
 
 #title {
@@ -68,8 +68,8 @@ div {
 
 #textBar {
   position: relative;
-  top: 21vh;
-  left: 50.5vw;
+  top: 29vh;
+  left: 51.5vw;
   width: fit-content;
 
   text-align: right;
@@ -100,13 +100,16 @@ div {
   font-size: 0.85rem;
   font-style: italic;
   font-family: "Open sans";
+  line-height: 1.5rem;
 }
 
-#infoBar {
+.infoBar {
+  position: relative;
   display: flex;
+  flex-direction: row;
 }
 
-#btn {
+.btn {
   color: white;
   background-color: rgb(205, 70, 47);
   border-radius: 2rem;
@@ -128,7 +131,7 @@ span {
 }
 
 .subTitle2 {
-  margin-top: 0.5rem;
+  margin-top: 1.2rem;
   color: black;
   font-weight: 300;
   font-size: 1.2rem;
@@ -136,16 +139,60 @@ span {
 }
 
 pre {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .info1 {
   margin-left: 17vw;
-  margin-top: 16vh;
+  margin-top: 20vh;
   width: fit-content;
 }
 
 .info2Img {
   position: relative;
+  width: 54rem;
   bottom: 10vh;
+  left: 1vw;
+}
+
+#backlogo {
+  position: relative;
+}
+
+#backlogo::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url("/과제/0919/image/backlogo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.info3Img {
+  width: 60rem;
+  height: 30rem;
+  position: relative;
+
+  right: 20rem;
+}
+
+.info2 {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.info2Hide {
+  margin-top: 6rem;
+  margin-left: 5rem;
+  overflow: hidden;
+}
+#yotube {
+  width: 50%;
+  height: 315;
 }
