@@ -18,14 +18,30 @@
           this.arr.push(data);
         }
 
-        pop(data) {
-          this.arr.reverse();
-          this.pop();
-          this.arr.reverse();
+        shift() {
+          return this.arr.shift();
+        }
+
+        log(data) {
+          console.log("추가된 데이터는 " + data + " 입니다");
         }
       }
 
       const node = new Node();
+
+      node.push(1);
+      node.push(2);
+
+      node.push(3);
+      console.log(node);
+      node.shift();
+      console.log(node[0]);
+      console.log(node[1]);
+      console.log(node[2]);
+      console.log(node[3]);
+      console.log(node.arr[0]);
+      console.log(node.arr[1]);
+      console.log(node.arr[2]);
 
       //   class StackNode extends Node {
       //     // 기본 노드를 상속받아 스택노드를 생성한다.
