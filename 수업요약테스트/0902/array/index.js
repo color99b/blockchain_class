@@ -29,11 +29,11 @@
 //매개변수에 해당하는 함수의 매개변수(item) 은 배열의 각 아이템을 적용한다.
 //find 함수는 배열의 각 아이템을 순서대로 매개변수함수에 전달하여 리턴값을 확인한다.
 //매개변수 함수에게서 받은 리턴 값이 true 면, 해당 아이템을 리턴하고 find 함수를 종료한다.
-tempReturn = arr.find((item) => {
-  console.log("item" + item);
-  return item == 100; //find 함수의 리턴값은 true 값을 리턴 , return 값이 트루가 아니면 undefined
-});
-//find : 검색할 때 사용할 코드
+// tempReturn = arr.find((item) => {
+//   console.log("item" + item);
+//   return item == 100; //find 함수의 리턴값은 true 값을 리턴 , return 값이 트루가 아니면 undefined
+// });
+// //find : 검색할 때 사용할 코드
 
 // console.log(tempReturn);
 
@@ -139,7 +139,6 @@ for (let i = 0; i < arr.length; i++) {
   console.log("for : " + arr[i]);
 }
 
-arr.reverse();
 //순서 거꾸로
 console.log(arr);
 
@@ -160,7 +159,7 @@ console.log(arr.slice(1, 3));
 console.log(arr.slice(1, -1));
 // -는 뒤에서부터 확인합니다. +일때의 리버스. 5가 0이되고, 4가 -1이됨
 // 즉 1~ (끝을 시작점으로 했을때 1인지점)까지
-
+// console.log(arr);
 // console.log(arr.splice(1, 3));
 // console.log(arr);
 // //arr.splice(1,3) 1부터 3개를 자른다. 단 arr을 수정해버린다. <- 이 단점때문에 잘 안씀 - 장점으로 쓸수도

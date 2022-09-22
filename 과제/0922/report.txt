@@ -1,0 +1,7 @@
+클래스를 사용해서 stack을 생성
+- push, pop을 이용해서 데이터를 넣을 수 있다.
+
+
+
+ queuue구현(클래스 사용) , binary tree 구현 
+
