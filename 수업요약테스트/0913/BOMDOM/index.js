@@ -50,7 +50,7 @@ console.dir(document);
 // outerHTML 은 여는 태그와 닿는 태그를 모두 포함하여 데이터를 문자열로 받는다.
 
 console.log(document.getElementById("test").outerHTML);
-console.log(document.getElementById("test").id);
+console.log(document.getElementById("test"));
 console.log(document.getElementById("test").style.border);
 //엘레멘트 자체에 넣은 것만 표시됨. style 탭 css 탭에 따로 빼둔 친구들을 읽지 못함.
 document.getElementById("test").style.border = "10px solid red";
