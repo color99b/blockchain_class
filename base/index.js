@@ -1,10 +1,31 @@
-function solutionRetry(n) {
-  if (n == 0 || n == 1) return n;
+// const oneTwoThree = [3, 2, 3];
+// result = oneTwoThree.reduce((acc, cur, i) => {
+//   console.log(acc, cur, i);
+//   if (!(cur % 2)) acc.push(cur);
+//   return acc;
+// }, []);
+// // 0 3 2
+// // 3 2 1
+// // 5 1 0
+// console.log(result);
 
-  return solutionRetry(n - 1) + solutionRetry(n - 2);
-}
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+let result;
+result = words.reduce((acc, cur, i) => {
+  if (cur.includes("li")) acc.push(cur);
+  return acc;
+}, []);
 
-console.log(solutionRetry(4));
-console.log(solutionRetry(10));
-console.log(solutionRetry(7));
-console.log(solutionRetry(15));
+console.log(result);
+let result2;
+result2 = words.filter((asd) => asd.length > 5);
+
+console.log(result2);
+console.log("외모만으론 구별 불가능");
