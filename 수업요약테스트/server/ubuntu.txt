@@ -1,0 +1,38 @@
+ubuntu 서버 로그인비밀번호 : ubuntu
+sudo apt-get update
+sudo : 관리자 권한으로 실행한다.
+apt-get : 우분투에서 사용하는 프로그램 관리자 ( 프로그램 추가/제거 )
+apt-get update : 설치되어 있는 프로그램들의 최신 버전 전부를 가져온다.
+sudo apt-get install apache2
+sudo service apache2 status
+apache2 : 웹 서버 프로그램 
+service : 실행중인 프로그램관리자
+status : service 프로그램을 사용해 다른 프로그램의 상태를 확인한다.
+
+cd/var/www
+cd => 경로이동
+/ > root 폴더기준
+./ > 현재경로 기준
+../ > 이전 경로
+
+
+ls => 경로내의 파일, 폴더 보기
+ls -a  => 모든 파일, 폴더 보기
+ls-al => 경로 내의 모든 파일, 폴더의 자세한 정보보기
+
+drwxr-xr-x
+d => 파일타입
+rwx / r-x / r-x : 소유자의 권한 / 소유 그룹의 권한 / 이외(제 3자) 권한
+r : read
+w : write
+x : execute
+- : 권한이 없음
+
+apache 폴더의 기본 위치  : /var/www/html
+
+sudo chmod 777 html
+chmod => 권한 설정하는 프로그램
+7 => 2진법으로 0111 => 111 => 4 + 2+ 1  -> r이 참이냐? w가 참이냐? x가 참이냐 ?
+
+6 -> 0110  -> 4 + 2 -> r 이 참이냐? w가 참이냐? x가 참이냐 ?
+
