@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESTFUL API</title>
+  </head>
+  <body>
+    API = apllication server &lt&lt 데이터를 주고 받는 서버
+    <br />
+    데이터는 보통 json 형식으로 주고받는다. <br />
+    또는 XML 형식 <br />
+    <button onclick="">test</button>
+    <form action="/api/user" method="post">
+      <label for="name">이름 : </label
+      ><input type="text" name="name" id="name" />
+    </form>
+    REST APIWs<br />
+    REST API란 Web 통신에서 클라이언트와 서버가 데이터를 주고바든 ㅂ방식 중
+    하나인데 <br />
+    가장 대표적 REpresentational State<br />
+    put:데이터를 수정할 때 사용, 비밀번호 변경, 게시글 수정<br />
+    DELETE : 데이터를 삭제 할 때 사용 <br />
+    Option : 요청을 하기 전에 통신 옵션을 설명하기 위해 사용<br />
+    로그인 -> 다른 페이지 출력 -> 옵션을 통해 로그인 정보ㅡㄹ 확인하고 그 잏에
+    GET 처리 -> 알맞은 데이터(html 파일 등등) 을 응답한다 <br />
+    -> cors : (cross-origin resource sharing) / 클라이언트가 하나의서버에서 html
+    파일 등등을 받고 다른 서버에서 미디어를 받을 때 두 주소가 다르면
+    원칙적ㅇㅡ러 받을 수 없게 되어 있다. 즉 불펌이 불가능하다. 허용할 수 있게
+    해주ㅡㄴ 기수 Pathch : PS :<br />
+
+    pOST: 데이터를 보낼 때 사용, 저장할 때, 로그인 할 때, 회원가입할 때,
+    비밀스러운 정보를 요청할 때, BODY : 숨겨져서 서버에데이터를 보낸다
+    비밀스러운 정보를 요청할 때<br />
+    patch : 데이터를 일부만 수정할 때 사용 <br />
+  </body>
+</html>
