@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.todo-list {
+  padding: 10px;
+}
+
+.delBox {
+  margin: 1rem;
+}
+
+.delButton {
+  width: fit-content;
+  height: 2rem;
+  border-radius: 15px;
+}
+
+button {
+  border: none;
+}
