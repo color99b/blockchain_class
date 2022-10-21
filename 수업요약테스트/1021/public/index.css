@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+}
+
+#board {
+  flex: 1;
+  /* flex 0 : 늘리지않겠다, flex 1:  늘리겠다 */
+}
+
+#user-input-container {
+  width: 300px;
+  padding: 10px;
+  background-color: beige;
+}
+
+#menu-btn {
+  width: 50px;
+}
+
+#menu-btn-box {
+  margin-bottom: 20px;
+}
+#board-add {
+  width: 100%;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#board-text {
+  width: 100%;
+  resize: none;
+}
