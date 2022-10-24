@@ -14,10 +14,16 @@ document.getElementById("board-add").onsubmit = async function (e) {
     console.log(e.target["board-text"].value);
   }
   try {
+    const userData = await axios.post("/api/user/login", {
+      id: document.forms["user-info"].id.value,
+      pw: document.forms["user-info"].pw.value,
+    });
+
     const data = await axios.post("/api/board/add", {
       title: e.target["board-title"].value,
       text: e.target["board-text"].value,
       uptime: Date.now(),
+      issuer: userData.data.idName,
     });
     console.log(data.data);
     if (data.data.status == 200) {
@@ -138,6 +144,7 @@ let getList = async function () {
       const tempDelbtn = document.createElement("img");
       const tempEditbtn = document.createElement("img");
       const tempCancelBtn = document.createElement("img");
+      const tempIssuer = document.createElement("span");
       tempTitle.classList.add("title");
       tempTitle.onclick = function (e) {
         tempText.classList.toggle("on");
@@ -149,6 +156,12 @@ let getList = async function () {
       tempImg.src = "./imgs/angle-up-solid.svg";
       tempImg.alt = "list-item-btn";
       tempH3.innerText = data.title;
+      tempIssuer.innerText = data.issuer;
+      console.log(data.issuer);
+      tempIssuer.classList.add("issuer");
+
+      tempH3.append(tempIssuer);
+
       tempP.innerText = data.text;
       tempTextArea.value = data.text;
 
@@ -168,12 +181,21 @@ let getList = async function () {
 
       tempDelbtn.onclick = async function (e) {
         try {
-          const data = await axios.post("/api/board/delete", {
-            count,
-            num: index,
+          const userissuer = document.getElementsByClassName("issuer");
+          const userData = await axios.post("/api/user/login", {
+            id: document.forms["user-info"].id.value,
+            pw: document.forms["user-info"].pw.value,
           });
-          getList();
-          console.log(data.data);
+          for (let i = 0; i < userissuer.length; i++) {
+            console.log(userissuer[i].innerText);
+            if (userissuer[i].innerText == userData.data.idName) {
+              const data = await axios.post("/api/board/delete", {
+                count,
+                num: index,
+              });
+              getList();
+            }
+          }
         } catch (err) {
           console.log(err);
         }
@@ -222,3 +244,37 @@ let getList = async function () {
 //   console.log(data);
 // });
 getList();
+const boardService = document.getElementById("board-add");
+
+document.getElementById("sign-in").onclick = async function (e) {
+  e.preventDefault();
+  const data = await axios.post("/api/user/login", {
+    id: document.forms["user-info"].id.value,
+    pw: document.forms["user-info"].pw.value,
+  });
+  console.log(data.data);
+  if (data.data.idName) {
+    document.getElementById("user-name").innerText =
+      data.data.idName + " 님 어서오세요 XD";
+
+    document.getElementById("sign-in").style.display = "none";
+    document.getElementById("sign-up").style.display = "none";
+    boardService.style.display = "block";
+
+    document.getElementById("logOut").style.display = "block";
+  }
+};
+document.getElementById("sign-up").onclick = async function (e) {
+  e.preventDefault();
+  const data = await axios.post("/api/user/regist", {
+    id: document.forms["user-info"].id.value,
+    pw: document.forms["user-info"].pw.value,
+  });
+  console.log(data.data);
+};
+
+let blockService = function () {
+  boardService.style.display = "none";
+};
+
+blockService();

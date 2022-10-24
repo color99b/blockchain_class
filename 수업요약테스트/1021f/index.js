@@ -6,13 +6,14 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const path = require("path");
-// const routes = require("./routes/index.js");
-
+const routes = require("./routes/index.js");
+const jwtKey = "tokenKey";
 const boardList = [];
-
+// require("./api/cryptoTest.js");
+// import "./api/cryptoTest.js"
 const app = express();
 dotenv.config();
-
+// require("./routes/user.js");
 app.use((req, res, next) => {
   if (process.env.NODE_ENV === "production") morgan("combined")(req, res, next);
   else morgan("dev")(req, res, next);
@@ -45,9 +46,10 @@ app.use(
 //   next();
 //   // api 이후 router를 찾는다.
 // });
-// app.use("/api", routes);
+
 app.post("/api/board/add", (req, res) => {
   boardList.unshift(req.body);
+  console.log(req.body);
   res.send({ status: 200, data: "정상 입력" });
 });
 
@@ -71,6 +73,8 @@ app.get("/api/board", (req, res) => {
       ) + 1,
   });
 });
+
+app.use("/api", routes);
 
 app.listen(8080, () => {
   console.log("http://localhost:8080");
