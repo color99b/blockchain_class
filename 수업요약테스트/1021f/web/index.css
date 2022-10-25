@@ -129,14 +129,29 @@ h3 {
 #user-info {
   width: 280px;
 }
-
+#name,
+#gender,
+#age {
+  display: none;
+}
 #sign-input,
 #btn-box {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  margin: 3px;
 }
-
+#btn-box {
+  display: flex;
+  flex-direction: row;
+}
+#sign-up {
+  display: none;
+}
+#sign-up-button {
+  display: block;
+}
 #user-info input {
   padding: 5px;
   margin: 0 5px;

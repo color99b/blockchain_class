@@ -26,7 +26,10 @@ router.post("/regist", (req, res) => {
   });
   //응답으로 쿠키 추가
   if (!userList[req.body.id]) {
-    userList[req.body.id] = crypto.SHA256(req.body.pw).toString();
+    userList[req.body.id] = {
+      pw: crypto.SHA256(req.body.pw).toString(),
+      name: req.body.name,
+    };
 
     // pw: req.body.pw.crypto.SHA256(req.body.pw).toString(),
 
@@ -41,8 +44,22 @@ router.post("/login", (req, res) => {
   // console.log(req.cookies.cookie_name);
   //요청을 통해 받은 쿠키
 
-  if (userList[req.body.id] === crypto.SHA256(req.body.pw).toString()) {
-    res.send({ status: 200, data: "login", idName: req.body.id });
+  if (userList[req.body.id]?.pw === crypto.SHA256(req.body.pw).toString()) {
+    res.cookie(
+      "log_jwt",
+      jwt.sign({ name: userList[req.body.id].name }, "block7testing", {
+        algorithm: "HS256",
+        expiresIn: "10m",
+        issuer: "kyj",
+      })
+    );
+    res.send({
+      status: 200,
+      data: "login",
+      idName: req.body.name,
+      age: req.body.age,
+      gender: req.body.gender,
+    });
   } else {
     res.send({ status: 401, data: "wrong password" });
   }

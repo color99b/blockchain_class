@@ -17,6 +17,9 @@ document.getElementById("board-add").onsubmit = async function (e) {
     const userData = await axios.post("/api/user/login", {
       id: document.forms["user-info"].id.value,
       pw: document.forms["user-info"].pw.value,
+      name: document.forms["user-info"].name.value,
+      gender: document.forms["user-info"].gender.value,
+      age: document.forms["user-info"].age.value,
     });
 
     const data = await axios.post("/api/board/add", {
@@ -185,6 +188,9 @@ let getList = async function () {
           const userData = await axios.post("/api/user/login", {
             id: document.forms["user-info"].id.value,
             pw: document.forms["user-info"].pw.value,
+            name: document.forms["user-info"].name.value,
+            gender: document.forms["user-info"].gender.value,
+            age: document.forms["user-info"].age.value,
           });
           for (let i = 0; i < userissuer.length; i++) {
             console.log(userissuer[i].innerText);
@@ -251,6 +257,9 @@ document.getElementById("sign-in").onclick = async function (e) {
   const data = await axios.post("/api/user/login", {
     id: document.forms["user-info"].id.value,
     pw: document.forms["user-info"].pw.value,
+    name: document.forms["user-info"].name.value,
+    gender: document.forms["user-info"].gender.value,
+    age: document.forms["user-info"].age.value,
   });
   console.log(data.data);
   if (data.data.idName) {
@@ -262,6 +271,12 @@ document.getElementById("sign-in").onclick = async function (e) {
     boardService.style.display = "block";
 
     document.getElementById("logOut").style.display = "block";
+    document.getElementById("nickname").innerText =
+      "nickname: " + data.data.idName;
+
+    document.getElementById("age").innerText = "age: " + data.data.age;
+
+    document.getElementById("gender").innerText = "gender: " + data.data.gender;
   }
 };
 document.getElementById("sign-up").onclick = async function (e) {
@@ -269,8 +284,50 @@ document.getElementById("sign-up").onclick = async function (e) {
   const data = await axios.post("/api/user/regist", {
     id: document.forms["user-info"].id.value,
     pw: document.forms["user-info"].pw.value,
+    name: document.forms["user-info"].name.value,
+    gender: document.forms["user-info"].gender.value,
+    age: document.forms["user-info"].age.value,
   });
-  console.log(data.data);
+
+  document.getElementById("sign-in").style.display = "block";
+  document.getElementById("name").style.display = "none";
+  document.getElementById("gender").style.display = "none";
+  document.getElementById("age").style.display = "none";
+
+  // document.forms["user-info"].id.value =
+  //   document.forms["user-info"].pw.value =
+  //   document.forms["user-info"].name.value =
+  //     "";
+};
+
+document.getElementById("logOut").onclick = async function (e) {
+  e.preventDefault();
+
+  document.getElementById("user-name").innerText = "";
+
+  document.getElementById("sign-in").style.display = "block";
+  document.getElementById("sign-up").style.display = "none";
+  document.getElementById("sign-up-button").style.display = "block";
+
+  boardService.style.display = "none";
+
+  document.getElementById("logOut").style.display = "none";
+
+  document.forms["user-info"].id.value =
+    document.forms["user-info"].pw.value =
+    document.forms["user-info"].name.value =
+      "";
+};
+
+document.getElementById("sign-up-button").onclick = async function (e) {
+  e.preventDefault();
+
+  document.getElementById("sign-up-button").style.display = "none";
+  document.getElementById("sign-up").style.display = "block";
+  document.getElementById("sign-in").style.display = "none";
+  document.getElementById("name").style.display = "block";
+  document.getElementById("gender").style.display = "block";
+  document.getElementById("age").style.display = "block";
 };
 
 let blockService = function () {
