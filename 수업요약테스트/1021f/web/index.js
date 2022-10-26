@@ -291,8 +291,7 @@ document.getElementById("sign-up").onclick = async function (e) {
 
   document.getElementById("sign-in").style.display = "block";
   document.getElementById("name").style.display = "none";
-  document.getElementById("gender").style.display = "none";
-  document.getElementById("age").style.display = "none";
+  document.getElementById("myInfo").style.display = "none";
 
   // document.forms["user-info"].id.value =
   //   document.forms["user-info"].pw.value =
@@ -326,8 +325,7 @@ document.getElementById("sign-up-button").onclick = async function (e) {
   document.getElementById("sign-up").style.display = "block";
   document.getElementById("sign-in").style.display = "none";
   document.getElementById("name").style.display = "block";
-  document.getElementById("gender").style.display = "block";
-  document.getElementById("age").style.display = "block";
+  document.getElementById("myInfo").style.display = "block";
 };
 
 let blockService = function () {

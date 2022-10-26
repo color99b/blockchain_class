@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div id="container">
+        <div id="loginZone">
+          <div class="cBox" id="idZone">
+            <form method="post" id="loginForm">
+              ID : <input type="text" id="id" /> <br />PW :
+              <input type="password" id="pw" />
+            </form>
+          </div>
+          <div class="loginButton">
+            <button class="btnBasic" id="login">로그인</button>
+            <button class="btnBasic" id="logOut">로그아웃</button>
+          </div>
+        </div>
+        <div class="basicDiv">
+          <button id="sign-up" class="btnBasic">회원가입</button>
+        </div>
+
+        <div id="myInfo">
+          <div id="infoID"></div>
+          <div id="infoName">name:</div>
+          <div id="infoAge">age:</div>
+          <div id="infoGender">gender:</div>
+        </div>
+        <div id="signUpZone">
+          <form method="post" id="sginUpForm">
+            <div>ID: <input type="text" id="signUpID" /></div>
+
+            <div>PW: <input type="text" id="signUpPW" /></div>
+
+            <div>Name: <input type="text" id="signUpName" /></div>
+            <div>
+              Gender:
+              <input type="radio" name="gender" value="male" />남성<input
+                type="radio"
+                name="gender"
+                value="female"
+              />여성
+            </div>
+            <div>Age: <input type="number" id="signUpAge" /></div>
+            <div>
+              <button class="btnBasic" id="signUpSubmit">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div id="writeZone">
+          <form id="board-add">
+            <label for="board-title"
+              >글 제목 :
+              <input
+                type="text"
+                id="board-title"
+                placeholder="글 제목을 입력하세요."
+            /></label>
+            <label for="board-text">
+              <textarea
+                name="board-text"
+                id="board-text"
+                cols="30"
+                rows="10"
+                placeholder="글 내용을 입력하세요."
+              ></textarea>
+            </label>
+            <button class="btnBasic" id="upLoad">업로드</button>
+          </form>
+        </div>
+      </div>
+      <div id="board">
+        여기는 보드당
+        <ul id="list">
+          <div>
+            <h3>"123"<span>id</span></h3>
+            <img src="./imgs/angle-down-solid.svg" alt="" />
+            <img src="./imgs/angle-down-solid.svg" alt="" />
+          </div>
+          <div>
+            <p>123</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+        </ul>
+        <ul id="page"></ul>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

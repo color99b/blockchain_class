@@ -1,0 +1,111 @@
+body,
+html {
+  padding: 10%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid lightgray;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#loginZone {
+  display: flex;
+}
+
+.cBox {
+  display: flex;
+  flex-direction: column;
+}
+#idZone {
+  width: 60%;
+}
+
+.btnBasic {
+  width: 100%;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+
+input {
+  background-color: gray;
+  color: beige;
+  border-radius: 10px;
+  width: 10vw;
+}
+
+.loginButton {
+  padding: 20px 10px 10px 10px;
+  width: 40%;
+}
+
+.basicDiv {
+  padding-right: 10px;
+}
+
+#signUpZone {
+  display: none;
+  flex-direction: column;
+
+  text-align: right;
+  padding-right: 30%;
+  margin-top: 1rem;
+}
+
+#signUpZone.on {
+  display: flex;
+  flex-direction: column;
+
+  text-align: right;
+  padding-right: 1vw;
+  margin-top: 1rem;
+}
+
+#signUpSubmit {
+  width: 50%;
+  padding: 5px;
+  margin-top: 10px;
+}
+#myInfo {
+  flex-direction: column;
+  text-align: right;
+  padding-right: 2vw;
+  margin-top: 1rem;
+  display: none;
+}
+
+#myInfo.on {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 2vw;
+  margin-top: 1rem;
+}
+
+#loginForm {
+  /* display: flex; */
+  text-align: right;
+  padding: 10%;
+}
+
+#logOut {
+  display: none;
+}
+
+#board {
+  width: 100%;
+}
+
+#login {
+  top: -5px;
+}
