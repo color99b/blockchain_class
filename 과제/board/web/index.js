@@ -137,9 +137,17 @@ let getList = async function () {
     data.data.list.forEach((data, index) => {
       const tempLi = document.createElement("li");
       const tempTitle = document.createElement("div");
+      tempTitle.classList.add("title");
+      tempTitle.onclick = function (e) {
+        tempText.classList.toggle("on");
+        tempImg.classList.toggle("on");
+      };
       const tempH3 = document.createElement("h3");
       const tempText = document.createElement("div");
+      tempText.classList.add("text");
+
       const tempImg = document.createElement("img");
+      tempImg.classList.add("textSee");
       const tempP = document.createElement("p");
       const tempTextArea = document.createElement("textarea");
       const tempBtnBox = document.createElement("div");
@@ -164,7 +172,7 @@ let getList = async function () {
       tempP.innerText = data.text;
       tempTextArea.value = data.text;
 
-      tempDelbtn.src = "./imgs/skull-crossbones-solid";
+      tempDelbtn.src = "./imgs/skull-crossbones-solid.svg";
       tempDelbtn.alt = "delete-btn";
 
       tempEditbtn.src = "./imgs/hand-scissors-solid.svg";

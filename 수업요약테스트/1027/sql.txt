@@ -1,0 +1,95 @@
+CREATE SCHEMA `hehe` DEFAULT CHARACTER SET utf8mb4 ;
+
+CREATE TABLE `testing`.`new_table` (
+  `idx` INT NOT NULL,
+  `new_tablecol` VARCHAR(45) NULL,
+  PRIMARY KEY (`idx`)
+);
+
+CREATE : 생성하는 명령어
+
+DEFAULT CHARACTER SET : 기본 인코딩 방식
+
+
+`testing`.`new_table`
+ - `DB명`.`생성할 테이블명`
+(
+  `idx` INT NOT NULL,
+  `new_tablecol` VARCHAR(45) NULL,
+  PRIMARY KEY (`idx`)
+);
+(`컬럼명` 자료형 옵션, `컬럼명` 자료형 옵션, 옵션)
+-idx 컬럼명을 int 자료형을 사용하여 생성하되 idx는 빈값이면 안된다.
+new_tablecol 컬럼명을 VARCHAR(45) 자료형을 사용하여 생성하고 빈 값이들어가도 상관없다.
+PRIMARY KEY 로 idx를 설정한다
+
+
+- BOOLEAN : 참 거짓, 1byte
+- TINYINT : 1BYTE 의 정수 << -128 ~ 127, 0~255
+   -> 127 +1 -> -128로 / 0 -1  -> 255로
+- INT : 4BYTE 의 정수 << 	–2,147,483,648 ~ 2,147,483,647
+- BIGINT : 8 BYTE 의 정수
+- FLOAT : 4 BYTE의 실수
+  -> 계산할 때 확률적으로 오류가 뜬다
+  -> 실수 계산을 컴퓨터가 잘 못 한다.
+
+-DOUBLE : 8 BYTE의 실수
+- BIT(n) : n BIT 의 정수
+
+
+- CHAR (n) : n BYTE의 문자, 최대 2^8 BYTE 까지만 가능
+
+
+-VARCHAR(n) : 최대 n BYTE 의 가변 문자, 최대 2^8 BYTE 까지만 가능
+ -> ASCII => 1byte (8 bit) 2^8 < 0~126 < 2^7 -1 < 7 BIT
+ -> UTF-8 => 1~3BYTE << 최대 글자수는 2^8 / 
+ -> UTF8MB4 => 1~4 BYTE
+  -> UTF16 => 3BYTE
+
+-TEXT : 최대 2^16 BYTE의 가변 문자
+- LONGTEXT : 최대 2^32 BYTE의 가변 문자
+
+-DATE :3 BYTE 의 날짜 -> YYYY-MM-DD
+-DATETIME : 8 BYTE 의 날짜와 시간 -> YYYY-MM-DD  HH:MM:SS
+-TIMESTAMP : 4BYTE 의 UTC 날짜와 시간 -> YYYY-MM-DD  HH:MM:SS
+-YEAR : 1 BYTE 연도 -> YYYY
+
+옵션
+- NOT NULL : 빈 값이면 안된다.
+- UNIQUE : 값이 중복되면 안된다.
+- PRIMARY KEY : 고유 식별 키
+- FOREIGN KEY : 테이블 연결 시 사용
+- CHECK : 저장할 데이터의 범위나 조건을 지정한다
+- DEFAULT : 기본값
+- AUTO_INCREMENT : index 값 자동 증가
+- COMMENT : 설명
+
+
+SELECT * FROM hehe.new_table;
+SELECT  : 데이터를 가져온다.
+* : 전부
+from : ~로 부터
+
+
+SELECT * FROM hehe.new_table WHERE name="~~~";
+SELECT * FROM hehe.new_table WHERE 조건;
+SELECT * FROM hehe.new_table WHERE name LIKE "~~~";  -> name 에 ~~~ 가 포함되어 있으면 가져와라.
+
+SELECT * FROM hehe.new_table ORDER BY name DESC; -> 내림차순으로 name을 가져온다 (ASC : 오름차순)
+SELECT COUNT FROM hehe.new_table; -> 개수 가져오기
+
+
+
+USE testing1;
+testing 1 DB 를 사용한다.
+
+INSERT INTO `hehe`.`new_table` (`idx`, `name`, `password`, `id`, `create_at`) VALUES ('0', '영준', 'asd', 'sss', '2022-10-27');
+
+insert : 데이터를 저장한다.
+into : 위치
+(`idx`) : 컬럼명
+VALUES ('0') : 어떤 값들이냐?
+`` : 객체 (컬럼명)
+'' : 고유값 (데이터)
+
+INSERT INTO `hehe`.`new_table` (`idx`, `name`, `password`, `id`, `create_at`) VALUES ('1', '영준', 'asd', 'sss', '2022-10-27');
