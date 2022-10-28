@@ -5,6 +5,7 @@ const user = require("./user.js");
 router.use("/", (req, res, next) => {
   console.log("routes/index.js :" + req.url);
   next();
+  
 });
 
 // router.use("/board", board);

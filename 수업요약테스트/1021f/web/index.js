@@ -152,7 +152,6 @@ let getList = async function () {
       tempTitle.onclick = function (e) {
         tempText.classList.toggle("on");
         tempImg.classList.toggle("on");
-        tempImg.classList.toggle("on");
         tempText.classList.remove("edit");
       };
       tempText.classList.add("text");

@@ -42,6 +42,9 @@ app.use(
 // });
 
 // app.use("/api", (req, res, next) => {
+
+
+
 //   console.log("url2" + req.url);
 //   next();
 //   // api 이후 router를 찾는다.
@@ -73,6 +76,7 @@ app.get("/api/board", (req, res) => {
       ) + 1,
   });
 });
+
 
 app.use("/api", routes);
 
