@@ -9,12 +9,13 @@
   <body>
     <script>
       async function testGet(query) {
-        const data = (await axios.get("/hi/table1?" + query)).data;
+        const data = (await axios.get("/hi/table1?" + query)).data;              
         console.log(data);
       }
       testGet("colum2=2");
 
       testGet("");
+      
       async function testPost(item) {
         const data = (await axios.post("/hi/table1", { column1: item })).data;
         console.log(data);
