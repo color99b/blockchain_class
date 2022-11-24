@@ -8,3 +8,4 @@ function Log() {
 }
 
 export default Log;
+console.log("");
