@@ -6,6 +6,9 @@ function UserBox() {
   const [list, setList] = useState([
     { id: "실험용", pw: "1234", nickname: "야호" },
   ]);
+
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
   console.log(list);
   return (
     <div>
@@ -24,7 +27,12 @@ function UserBox() {
           path={"signin"}
           // element={}
         />
-        <Route path={"signup"} element={<SignUp></SignUp>} setList={setList} />
+        <Route
+          path={"signup"}
+          element={<SignUp></SignUp>}
+          setList={setList}
+          setId={setId}
+        />
       </Routes>
     </div>
   );

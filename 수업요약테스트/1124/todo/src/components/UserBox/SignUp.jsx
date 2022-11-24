@@ -4,10 +4,7 @@ import DefaultBtn from "./DefaultBtn";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function SignUp(setList) {
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
-
+function SignUp(setList, setId) {
   const [nickname, setNickname] = useState("");
 
   return (
