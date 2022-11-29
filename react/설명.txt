@@ -1,0 +1,8 @@
+container 는  로직을 다루는 부분
+
+container vs components
+js등의 로직 -  html 구조
+
+나누는 이유 : 유지보수에 좋고, 가시성이 좋다.
+
+
