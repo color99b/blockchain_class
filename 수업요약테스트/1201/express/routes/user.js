@@ -30,7 +30,8 @@ router.post("/login", (req, res) => {
 
 router.post("/logout", (req, res) => {
   res.clearCookie("user");
-  user[req.body.userId] = undefined;
+  user[req.body.
+    userId] = undefined;
   res.end();
 });
 

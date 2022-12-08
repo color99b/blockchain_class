@@ -23,7 +23,7 @@ export const reducer = (state = initialize, action) => {
   // -state는 combinReducers 의 사용여부에 따라서 달라진다.
   console.log(action);
   const { type, payload } = action;
-  console.log(payload);
+ 
 
   //13. type에 따라서 state를 재정의한다. 재정의하고 싶은 정보를
   // return한다.

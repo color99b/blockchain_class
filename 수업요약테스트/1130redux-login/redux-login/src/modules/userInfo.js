@@ -13,6 +13,7 @@ const logout = () => ({
   type: TYPE.LOGOUT,
 });
 
+
 export const action = { login, logout };
 
 export const initialize = { userId: "", userName: "" };
