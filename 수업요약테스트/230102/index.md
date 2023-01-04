@@ -175,7 +175,7 @@
     - 순서
       1. sudo npm i -g pm2
       2. sudo pm2 start npm -- start (경로는 서버의 경로)
-      3. pm2 list <<
-      4.
+      3. sudo pm2 list << 실행중인 pm2 list를 보여준다
+      4. sudo pm2 stop npm << npm을 멈춘다
 
 -- ubutun 에서는 apache2이지만 linux 에서는 httpd라고 한다. 설정이 살짝 다르지만 둘 다 apache 이다.
