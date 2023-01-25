@@ -1,0 +1,20 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <!-- {{변수명}}  {-{변수명}-} 등등 형식을 지정하는 이유는
+    html엔 변수를 쓸 수 없기 때문에. js에서 {{}}, {-{}-} 등 찾기위한
+    규칙을 만든거라고 보면된다. 그럼 안에있는 title은 찾기 쉽기 때문.
+    -->
+    <style>
+      {{style}}
+    </style>
+  </head>
+  <body>
+    <div class="box">{{text}}</div>
+    <a href="{{link}}">{{linkName}}</a>
+    {{script}}
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "230125",
+  "version": "1.0.0",
+  "description": "- 마이크로 소프트에서 만든 js 기반 프로그래밍 언어(js의 슈퍼셋-> 상위호환)\r - js에 Type, 자료형 확인을 추가한 것,\r - 기본적 설치 : npm i -D typescript\r - 바로 실행되는 것이 아니라 js를 tsc(typeScriptCompiler)로 변환 후 사용한다.\r   -> Compiler 란 작성한 코드를 컴퓨터언어로 변환해준다. C++, Java 등에서 주로 사용.\r   -> 브라우저, node.js에서 바로 사용할 수 없다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
