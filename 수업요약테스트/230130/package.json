@@ -1,0 +1,23 @@
+{
+  "name": "230130",
+  "version": "1.0.0",
+  "description": "- 블록체인에서 누가 했는지, 즉 신원을 확인하기 위해 양방향 암호화를 사용한다.\r - 지금까지 다룬 Hash(Sha256) 은 단방향으로 복호화가 불가능하다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/elliptic": "^6.4.14",
+    "@types/node": "^18.11.18",
+    "elliptic": "^6.5.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1"
+  }
+}

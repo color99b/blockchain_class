@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@types/elliptic": "^6.4.14",
+    "elliptic": "^6.5.4"
+  }
+}
