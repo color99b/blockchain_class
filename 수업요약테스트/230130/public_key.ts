@@ -70,4 +70,3 @@ console.log("newVerify :", newVerify);
 const myWallet = publicKey.slice(26);
 console.log(myWallet.length);
 console.log(0x88);
-console.log(136.toString(16));
