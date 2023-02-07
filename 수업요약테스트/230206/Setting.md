@@ -76,7 +76,7 @@ make geth
     - 내용은 아래와 같다.
 
     ```
-    export PATH=$PATH:home/kyj/geth/go-ethereum/build/bin
+    export PATH=$PATH:/home/kyj/geth/go-ethereum/build/bin
 
     입력후 수정완료시
     esc- > :wq! -> enter

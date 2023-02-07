@@ -99,6 +99,18 @@ wsl
 
 - 나갈때는 exit
 
+11. WSL 에서 삭제하고 싶을 때
+
+```sh
+wsl --unregister Ubuntu
+```
+
+12. 기본적으로 WSL2를 사용하도록 설정
+
+```sh
+wsl --set-default-version 2
+```
+
 # 기본적인 명령어들
 
 - cd
