@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>현재 지갑 : <span id="account"></span></h1>
+    <h2>잔액 : <span id="balance"></span> ETH</h2>
+    <input type="text" id="metaMask" />
+    <button id="metaSearch">메타마스크 조회</button>
+    <h1><button id="meta">메타마스크 로그인</button></h1>
+    <button id="start">채굴시작</button>
+    <button id="stop">채굴중지</button>
+    <form id="transaction">
+      <input
+        type="password"
+        id="tran-pw"
+        placeholder="password"
+        pattern="[A-Za-z0-9]+"
+      />
+      <input type="text" id="transaction-account" />
+      <select id="select-account"></select>
+      <input type="number" id="ether" placeholder="Ether" />
+      <button>이더 보내기</button>
+    </form>
+
+    <form id="new-wallet">
+      <input
+        type="password"
+        id="new-pw"
+        placeholder="password"
+        pattern="[A-Za-z0-9]+"
+      />
+      <button id="new-wallet-btn">계정 생성</button>
+    </form>
+    <ul id="wallet-list"></ul>
+    <script src="index.js"></script>
+  </body>
+</html>
