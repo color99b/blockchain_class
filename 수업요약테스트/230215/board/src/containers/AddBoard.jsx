@@ -13,7 +13,7 @@ const AddBoardContainer = () => {
   };
 
   const upload = async () => {
-    console.log(boardData);
+    if (!boardData.title || !boardData.text) return;
     const result = await newBoard(boardData);
     if (!result.isError) navigate("/");
   };
