@@ -14,6 +14,12 @@
 geth --datadir ~/myGeth --http --http.addr "0.0.0.0" --http.port 8080 --http.corsdomain "*" --http.api "admin,miner,txpool,web3,personal,eth,net" --allow-insecure-unlock --syncmode full --networkid 50 console
 ```
 
+ws 사용할때는
+
+```sh
+geth --ws.api "admin,miner,txpool,web3,personal,eth,net" --allow-insecure-unlock --syncmode full --networkid 50 console
+```
+
 - datadir : 개인 이더리움 네트워크 데이터 저장 폴더
 - http : HTTP 서버를 배포, IPC로 조작하던 개인 이더리움 네트워크를 HTTP 통신으로 조작
 - http.addr : 요청 가능한 IP 주소 설정, 기본값 127.0.0.1 , 0.0.0.0 은 모든 IP 주소 허용
