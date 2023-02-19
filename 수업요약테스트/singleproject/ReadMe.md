@@ -4,7 +4,16 @@
 
 ```sh
 #18.12
-geth --datadir ~/myGeth --ws.api "admin,miner,txpool,web3,personal,eth,net" --allow-insecure-unlock --syncmode full --networkid 50 --ws --ws.port 8081 --ws.addr "0.0.0.0" --ws.origins "*" console
+geth --datadir ~/myGeth  --ws.api "admin,miner,txpool,web3,personal,eth,net" --allow-insecure-unlock --syncmode full --networkid 50 --ws --ws.port 8081 --ws.addr "0.0.0.0" --ws.origins "*" console
+```
+
+geth --networkid 7029 --mine --miner.threads 2 --datadir "./" --nodiscover --http --http.port "8545" --http.corsdomain "\*" --nat "any" --http.api eth,web3,personal,net --allow-insecure-unlock --password ./password.sec
+
+```sh
+geth --datadir ~/myGeth --http --http.addr "0.0.0.0" --http.port 8080 --http.corsdomain "*" --http.api "admin,miner,txpool,web3,personal,eth,net" --allow-insecure-unlock --syncmode full --networkid 50 console
+
+
+--http --http.addr "0.0.0.0" --http.port 8080 --http.corsdomain "*"
 ```
 
 ```sh
