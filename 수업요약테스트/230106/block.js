@@ -2,11 +2,7 @@ const { timeStamp } = require("console");
 const IBlock = require("./block.interface");
 const {
   lib: { merkle, SHA256, hexToBinary },
-  constant: {
-    DIFFICULTY_ADJSUTMENT_INTERVAL,
-    BLOCK_GENERATION_INVERVAL,
-    TIME_UNIT,
-  },
+  constant: { TY_ADJSUTMENT_INTERVAL, BLOCK_GENERATION_INVERVAL, TIME_UNIT },
 } = require("./config");
 
 class Block extends IBlock {
