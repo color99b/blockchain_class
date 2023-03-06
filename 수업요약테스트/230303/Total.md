@@ -5,9 +5,9 @@
 
 # back 세팅 라이브러리
 
-// npm i express cors truffle web3
-// npm i -D prettier-plugin-solidity
-// npx truffle init
+npm i express cors truffle web3
+npm i -D prettier-plugin-solidity
+npx truffle init
 
 # front 세팅 라이브러리
 
