@@ -15,6 +15,7 @@ function App() {
       setCandidateList(result.data.candidateList);
     })();
   }, []);
+
   return (
     <div className="App">
       <h1>오점뭐?</h1>
