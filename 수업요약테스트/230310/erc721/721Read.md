@@ -281,6 +281,7 @@ contract ERC721Enumerable is ERC721 {
         // 소유자의 마지막 토큰의 ID
         _ownedTokens[_from][tokenIndex] = latestTokenId;
         // 소유자의 (보내는 위치) 토큰 index의 ID를 소유자의 마지막
+        
         _ownedTokensIndex[latestTokenId] = tokenIndex;
       }
       delete _ownedTokens[_from][latestTokenIndex];

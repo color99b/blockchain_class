@@ -1,0 +1,15 @@
+{
+  "name": "Test NFT yoyo",
+  "description": "testing NFT with Pinata",
+  "img": "https://gateway.pinata.cloud/ipfs/Qme5UAngWoRmVM4XURcNyKfEWcs74etgsB5eCxohyC5tCo",
+  "attributes": [
+    {
+      "trait_type": "Rank",
+      "value": 1
+    },
+    {
+      "trait_type": "Type",
+      "value": 1
+    }
+  ]
+}
