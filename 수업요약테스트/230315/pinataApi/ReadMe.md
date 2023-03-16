@@ -12,4 +12,6 @@
 
 - API 사용할 file 작성
 
--
+## pinata, NFT의 흐름
+
+- ㅈ
